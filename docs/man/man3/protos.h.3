@@ -49,11 +49,13 @@ protos.h
 
 .in +1c
 .ti -1c
-.RI "\fBtext\fP \fBinitText\fP ()"
+.RI "void \fBinitText\fP (\fBtext\fP *target)"
 .br
+.RI "Initializes a text type var\&. "
 .ti -1c
-.RI "\fBline\fP \fBinitLine\fP ()"
+.RI "void \fBinitLine\fP (\fBline\fP *target)"
 .br
+.RI "Initializes a line type var\&. "
 .ti -1c
 .RI "void \fBkillText\fP (\fBtext\fP *target)"
 .br
@@ -62,6 +64,17 @@ protos.h
 .RI "void \fBkillLine\fP (\fBline\fP *target)"
 .br
 .RI "Deinitializes a line type var\&. "
+.ti -1c
+.RI "size_t \fBget_size\fP (const char *filename)"
+.br
+.RI "Returns size of file in chars\&. "
+.ti -1c
+.RI "char * \fBbufferize\fP (const char *filename)"
+.br
+.RI "Bufferizes file input\&. "
+.ti -1c
+.RI "\fBtext\fP \fBread_text\fP (const char *filename)"
+.br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -106,10 +119,68 @@ everything ok
 Definition at line 7 of file protos\&.h\&.
 .SH "Function Documentation"
 .PP 
-.SS "\fBline\fP initLine ()"
+.SS "char* bufferize (const char * filename)"
 
-.SS "\fBtext\fP initText ()"
+.PP
+Bufferizes file input\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to read from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ptr to c-string with whole text of file 
+.RE
+.PP
 
+.PP
+Definition at line 8 of file bufferize\&.cpp\&.
+.SS "size_t get_size (const char * filename)"
+
+.PP
+Returns size of file in chars\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to measure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+sizeof file in chars 
+.RE
+.PP
+
+.PP
+Definition at line 8 of file get_size\&.cpp\&.
+.SS "void initLine (\fBline\fP * target)"
+
+.PP
+Initializes a line type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP line* to var to init 
+.RE
+.PP
+
+.PP
+Definition at line 8 of file initializers_and_destructors\&.cpp\&.
+.SS "void initText (\fBtext\fP * target)"
+
+.PP
+Initializes a text type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP text* to var to init 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file initializers_and_destructors\&.cpp\&.
 .SS "void killLine (\fBline\fP * target)"
 
 .PP
@@ -136,6 +207,19 @@ Deinitializes a text type var\&.
 
 .PP
 Definition at line 41 of file initializers_and_destructors\&.cpp\&.
+.SS "\fBtext\fP read_text (const char * filename)"
+
+.PP
+.nf
+\brief Fills text type var with input from file
+\param filename name of file to fill from
+\return text struct full of stuff
+
+.fi
+.PP
+ Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) 
+.PP
+Definition at line 16 of file read_text\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

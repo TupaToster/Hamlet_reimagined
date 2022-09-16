@@ -42,9 +42,13 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_structtext">text</link> <link linkend="_protos_8h_1ab563e906068c4ab8853e8b07c074710f">initText</link> ()</para>
+            <listitem><para>void <link linkend="_protos_8h_1a3cc9f6add828df4782ed77208dd37977">initText</link> (<link linkend="_structtext">text</link> *target)</para>
+
+<para>Initializes a text type var. </para>
 </listitem>
-            <listitem><para><link linkend="_structline">line</link> <link linkend="_protos_8h_1a278f7d7631584b1f971fd69034e037d2">initLine</link> ()</para>
+            <listitem><para>void <link linkend="_protos_8h_1ab48cdaf07893d47c1ec98368a022dfd8">initLine</link> (<link linkend="_structline">line</link> *target)</para>
+
+<para>Initializes a line type var. </para>
 </listitem>
             <listitem><para>void <link linkend="_protos_8h_1a5cd4fdc44f5aab88c2b2f6072dd05ae9">killText</link> (<link linkend="_structtext">text</link> *target)</para>
 
@@ -53,6 +57,16 @@
             <listitem><para>void <link linkend="_protos_8h_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd">killLine</link> (<link linkend="_structline">line</link> *target)</para>
 
 <para>Deinitializes a line type var. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_protos_8h_1ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</link> (const char *filename)</para>
+
+<para>Returns size of file in chars. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_protos_8h_1a4533ca72f4105b135bffc875e44df8b1">bufferize</link> (const char *filename)</para>
+
+<para>Bufferizes file input. </para>
+</listitem>
+            <listitem><para><link linkend="_structtext">text</link> <link linkend="_protos_8h_1ab285374b18fe616378d88faa5eccf546">read_text</link> (const char *filename)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -139,15 +153,147 @@ Definition at line 7 of file protos.h.</para>
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_protos_8h_1a278f7d7631584b1f971fd69034e037d2"/>    <section>
+<anchor xml:id="_protos_8h_1a4533ca72f4105b135bffc875e44df8b1"/>    <section>
+    <title>bufferize()</title>
+<indexterm><primary>bufferize</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>bufferize</secondary></indexterm>
+<para><computeroutput>char* bufferize (const char * filename)</computeroutput></para><para>
+
+<para>Bufferizes file input. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ptr to c-string with whole text of file </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8 of file bufferize.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1ac87fbefe4ae9195d7ba3a7a38eed3fdb"/>    <section>
+    <title>get_size()</title>
+<indexterm><primary>get_size</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>get_size</secondary></indexterm>
+<para><computeroutput>size_t get_size (const char * filename)</computeroutput></para><para>
+
+<para>Returns size of file in chars. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to measure </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>sizeof file in chars </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8 of file get_size.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1ab48cdaf07893d47c1ec98368a022dfd8"/>    <section>
     <title>initLine()</title>
 <indexterm><primary>initLine</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>initLine</secondary></indexterm>
-<para><computeroutput><link linkend="_structline">line</link> initLine ( )</computeroutput></para>    </section><anchor xml:id="_protos_8h_1ab563e906068c4ab8853e8b07c074710f"/>    <section>
+<para><computeroutput>void initLine (<link linkend="_structline">line</link> * target)</computeroutput></para><para>
+
+<para>Initializes a line type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>line* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 8 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a3cc9f6add828df4782ed77208dd37977"/>    <section>
     <title>initText()</title>
 <indexterm><primary>initText</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>initText</secondary></indexterm>
-<para><computeroutput><link linkend="_structtext">text</link> initText ( )</computeroutput></para>    </section><anchor xml:id="_protos_8h_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd"/>    <section>
+<para><computeroutput>void initText (<link linkend="_structtext">text</link> * target)</computeroutput></para><para>
+
+<para>Initializes a text type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>text* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 29 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd"/>    <section>
     <title>killLine()</title>
 <indexterm><primary>killLine</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>killLine</secondary></indexterm>
@@ -213,6 +359,17 @@ Parameters                    </title>
                 </para>
 <para>
 Definition at line 41 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1ab285374b18fe616378d88faa5eccf546"/>    <section>
+    <title>read_text()</title>
+<indexterm><primary>read_text</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>read_text</secondary></indexterm>
+<para><computeroutput><link linkend="_structtext">text</link> read_text (const char * filename)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Fills text type var with input from file
+\param filename name of file to fill from
+\return text struct full of stuff
+</computeroutput></literallayout> Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
+<para>
+Definition at line 16 of file read_text.cpp.</para>
 </section>
 </section>
 </section>

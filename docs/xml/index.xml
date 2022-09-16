@@ -10,6 +10,12 @@
     <member refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kind="variable"><name>lines</name></member>
     <member refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kind="variable"><name>stringCnt</name></member>
   </compound>
+  <compound refid="bufferize_8cpp" kind="file"><name>bufferize.cpp</name>
+    <member refid="bufferize_8cpp_1a4533ca72f4105b135bffc875e44df8b1" kind="function"><name>bufferize</name></member>
+  </compound>
+  <compound refid="get__size_8cpp" kind="file"><name>get_size.cpp</name>
+    <member refid="get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
+  </compound>
   <compound refid="initializers__and__destructors_8cpp" kind="file"><name>initializers_and_destructors.cpp</name>
     <member refid="initializers__and__destructors_8cpp_1ab48cdaf07893d47c1ec98368a022dfd8" kind="function"><name>initLine</name></member>
     <member refid="initializers__and__destructors_8cpp_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd" kind="function"><name>killLine</name></member>
@@ -18,15 +24,21 @@
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kind="variable"><name>errCode</name></member>
-    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
   <compound refid="protos_8h" kind="file"><name>protos.h</name>
     <member refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kind="define"><name>check</name></member>
     <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056" kind="enum"><name>errorCode</name></member>
     <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
-    <member refid="protos_8h_1ab563e906068c4ab8853e8b07c074710f" kind="function"><name>initText</name></member>
-    <member refid="protos_8h_1a278f7d7631584b1f971fd69034e037d2" kind="function"><name>initLine</name></member>
+    <member refid="protos_8h_1a3cc9f6add828df4782ed77208dd37977" kind="function"><name>initText</name></member>
+    <member refid="protos_8h_1ab48cdaf07893d47c1ec98368a022dfd8" kind="function"><name>initLine</name></member>
     <member refid="protos_8h_1a5cd4fdc44f5aab88c2b2f6072dd05ae9" kind="function"><name>killText</name></member>
     <member refid="protos_8h_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd" kind="function"><name>killLine</name></member>
+    <member refid="protos_8h_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
+    <member refid="protos_8h_1a4533ca72f4105b135bffc875e44df8b1" kind="function"><name>bufferize</name></member>
+    <member refid="protos_8h_1ab285374b18fe616378d88faa5eccf546" kind="function"><name>read_text</name></member>
+  </compound>
+  <compound refid="read__text_8cpp" kind="file"><name>read_text.cpp</name>
+    <member refid="read__text_8cpp_1ab285374b18fe616378d88faa5eccf546" kind="function"><name>read_text</name></member>
   </compound>
 </doxygenindex>

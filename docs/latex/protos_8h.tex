@@ -26,14 +26,20 @@ enum \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_ab563e906068c4ab8853e8b07c074710f}{init\+Text}} ()
-\item 
-\mbox{\hyperlink{structline}{line}} \mbox{\hyperlink{protos_8h_a278f7d7631584b1f971fd69034e037d2}{init\+Line}} ()
-\item 
+void \mbox{\hyperlink{protos_8h_a3cc9f6add828df4782ed77208dd37977}{init\+Text}} (\mbox{\hyperlink{structtext}{text}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Initializes a text type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}{init\+Line}} (\mbox{\hyperlink{structline}{line}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Initializes a line type var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{protos_8h_a5cd4fdc44f5aab88c2b2f6072dd05ae9}{kill\+Text}} (\mbox{\hyperlink{structtext}{text}} $\ast$target)
 \begin{DoxyCompactList}\small\item\em Deinitializes a text type var. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}{kill\+Line}} (\mbox{\hyperlink{structline}{line}} $\ast$target)
-\begin{DoxyCompactList}\small\item\em Deinitializes a line type var. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Deinitializes a line type var. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}{get\+\_\+size}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Returns size of file in chars. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{protos_8h_a4533ca72f4105b135bffc875e44df8b1}{bufferize}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Bufferizes file input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_ab285374b18fe616378d88faa5eccf546}{read\+\_\+text}} (const char $\ast$filename)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -95,17 +101,87 @@ Definition at line 7 of file protos.\+h.
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{protos_8h_a278f7d7631584b1f971fd69034e037d2}\label{protos_8h_a278f7d7631584b1f971fd69034e037d2}} 
+\mbox{\Hypertarget{protos_8h_a4533ca72f4105b135bffc875e44df8b1}\label{protos_8h_a4533ca72f4105b135bffc875e44df8b1}} 
+\index{protos.h@{protos.h}!bufferize@{bufferize}}
+\index{bufferize@{bufferize}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{bufferize()}{bufferize()}}
+{\footnotesize\ttfamily char$\ast$ bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Bufferizes file input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of file to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr to c-\/string with whole text of file 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file bufferize.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}\label{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}} 
+\index{protos.h@{protos.h}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Returns size of file in chars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of file to measure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sizeof file in chars 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file get\+\_\+size.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}\label{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}} 
 \index{protos.h@{protos.h}!initLine@{initLine}}
 \index{initLine@{initLine}!protos.h@{protos.h}}
 \doxysubsubsection{\texorpdfstring{initLine()}{initLine()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structline}{line}} init\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void init\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}} $\ast$}]{target }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{protos_8h_ab563e906068c4ab8853e8b07c074710f}\label{protos_8h_ab563e906068c4ab8853e8b07c074710f}} 
+
+
+Initializes a line type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & line$\ast$ to var to init \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a3cc9f6add828df4782ed77208dd37977}\label{protos_8h_a3cc9f6add828df4782ed77208dd37977}} 
 \index{protos.h@{protos.h}!initText@{initText}}
 \index{initText@{initText}!protos.h@{protos.h}}
 \doxysubsubsection{\texorpdfstring{initText()}{initText()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structtext}{text}} init\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void init\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Initializes a text type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & text$\ast$ to var to init \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}\label{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}} 
 \index{protos.h@{protos.h}!killLine@{killLine}}
@@ -144,4 +220,18 @@ Deinitializes a text type var.
 
 
 Definition at line 41 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_ab285374b18fe616378d88faa5eccf546}\label{protos_8h_ab285374b18fe616378d88faa5eccf546}} 
+\index{protos.h@{protos.h}!read\_text@{read\_text}}
+\index{read\_text@{read\_text}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{read\_text()}{read\_text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtext}{text}} read\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Fills text type var with input from file
+\param filename name of file to fill from
+\return text struct full of stuff
+\end{DoxyVerb}
+ Fills text struct with\+: text\+String -\/ whole text of a file lines -\/ array of lines of file of type \mbox{[}begin, end) string\+Cnt -\/ amount of strings in file text\+Size -\/ sizeof text (by get\+\_\+size) 
+
+Definition at line 16 of file read\+\_\+text.\+cpp.
 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['text_17',['text',['../structtext.html',1,'']]],
-  ['textsize_18',['textSize',['../structtext.html#a859639b4d548fb8e77b46962b44d6528',1,'text']]],
-  ['textstring_19',['textString',['../structtext.html#acedd0976707f133eb8e729d778da7d37',1,'text']]]
+  ['read_5ftext_20',['read_text',['../protos_8h.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp'],['../read__text_8cpp.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp']]],
+  ['read_5ftext_2ecpp_21',['read_text.cpp',['../read__text_8cpp.html',1,'']]]
 ];

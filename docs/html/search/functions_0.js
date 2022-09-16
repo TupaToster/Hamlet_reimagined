@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['initline_25',['initLine',['../initializers__and__destructors_8cpp.html#ab48cdaf07893d47c1ec98368a022dfd8',1,'initLine(line *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a278f7d7631584b1f971fd69034e037d2',1,'initLine():&#160;protos.h']]],
-  ['inittext_26',['initText',['../initializers__and__destructors_8cpp.html#a3cc9f6add828df4782ed77208dd37977',1,'initText(text *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#ab563e906068c4ab8853e8b07c074710f',1,'initText():&#160;protos.h']]]
+  ['bufferize_34',['bufferize',['../bufferize_8cpp.html#a4533ca72f4105b135bffc875e44df8b1',1,'bufferize(const char *filename):&#160;bufferize.cpp'],['../protos_8h.html#a4533ca72f4105b135bffc875e44df8b1',1,'bufferize(const char *filename):&#160;bufferize.cpp']]]
 ];

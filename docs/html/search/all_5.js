@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['line_10',['line',['../structline.html',1,'']]],
-  ['lines_11',['lines',['../structtext.html#a826ba5613feb94342be61f8cce1c6771',1,'text']]]
+  ['killline_12',['killLine',['../initializers__and__destructors_8cpp.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp']]],
+  ['killtext_13',['killText',['../initializers__and__destructors_8cpp.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp']]]
 ];

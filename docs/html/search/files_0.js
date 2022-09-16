@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializers_5fand_5fdestructors_2ecpp_22',['initializers_and_destructors.cpp',['../initializers__and__destructors_8cpp.html',1,'']]]
+  ['bufferize_2ecpp_28',['bufferize.cpp',['../bufferize_8cpp.html',1,'']]]
 ];

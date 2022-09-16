@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_get__size_8cpp" xml:lang="en-US">
+<title>get_size.cpp File Reference</title>
+<indexterm><primary>get_size.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</link> (const char *filename)</para>
+
+<para>Returns size of file in chars. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb"/>    <section>
+    <title>get_size()</title>
+<indexterm><primary>get_size</primary><secondary>get_size.cpp</secondary></indexterm>
+<indexterm><primary>get_size.cpp</primary><secondary>get_size</secondary></indexterm>
+<para><computeroutput>size_t get_size (const char * filename)</computeroutput></para><para>
+
+<para>Returns size of file in chars. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to measure </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>sizeof file in chars </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8 of file get_size.cpp.</para>
+</section>
+</section>
+</section>

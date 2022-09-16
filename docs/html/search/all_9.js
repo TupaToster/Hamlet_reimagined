@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stringcnt_16',['stringCnt',['../structtext.html#ac9b610f2d15da2a601e4dc20d252270a',1,'text']]]
+  ['protos_2eh_19',['protos.h',['../protos_8h.html',1,'']]]
 ];

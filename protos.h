@@ -38,10 +38,16 @@ struct text {
     size_t stringCnt = 0;    ///< size_t that indicates amount of lines in text
 };
 
-text initText ();
+void initText (text* target);
 
-line initLine ();
+void initLine (line* target);
 
 void killText (text* target);
 
 void killLine (line* target);
+
+size_t get_size (const char* filename);
+
+char* bufferize (const char* filename);
+
+text read_text (const char* filename);

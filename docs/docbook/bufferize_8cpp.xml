@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bufferize_8cpp" xml:lang="en-US">
+<title>bufferize.cpp File Reference</title>
+<indexterm><primary>bufferize.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_bufferize_8cpp_1a4533ca72f4105b135bffc875e44df8b1">bufferize</link> (const char *filename)</para>
+
+<para>Bufferizes file input. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_bufferize_8cpp_1a4533ca72f4105b135bffc875e44df8b1"/>    <section>
+    <title>bufferize()</title>
+<indexterm><primary>bufferize</primary><secondary>bufferize.cpp</secondary></indexterm>
+<indexterm><primary>bufferize.cpp</primary><secondary>bufferize</secondary></indexterm>
+<para><computeroutput>char* bufferize (const char * filename)</computeroutput></para><para>
+
+<para>Bufferizes file input. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ptr to c-string with whole text of file </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8 of file bufferize.cpp.</para>
+</section>
+</section>
+</section>

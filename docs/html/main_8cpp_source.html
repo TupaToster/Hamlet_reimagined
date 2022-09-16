@@ -93,15 +93,65 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html',''); initResiza
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">enum</span> <a class="code" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</a> <a class="code" href="main_8cpp.html#a6dab97701c064b3a7184b2fc5160ceea">errCode</a> = <a class="code" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> () {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">char</span>*  inName = NULL;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">char</span>* outName = NULL;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> (argc == 3) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        inName  = (<span class="keywordtype">char</span>*) calloc (strlen (argv[1]) + 1, <span class="keyword">sizeof</span> (char));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        strcpy (inName, argv[1]);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        outName = (<span class="keywordtype">char</span>*) calloc (strlen (argv[2]) + 1, <span class="keyword">sizeof</span> (char));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        strcpy (outName, argv[2]);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="structtext.html">text</a> hamlet = <a class="code" href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">read_text</a>(inName);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    printf (<span class="stringliteral">&quot;%s&quot;</span>, hamlet.<a class="code" href="structtext.html#acedd0976707f133eb8e729d778da7d37">textString</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    printf (&quot;Sorting straight type...\n&quot;);</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    printf (&quot;Sorted straight type, printing...\n&quot;);</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    for (int i = 0; i &lt; hamlet.stringCnt; i++) {</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">        fput_line (hamlet.lines[i], output);</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    printf (&quot;Printed straight type. Procceeding.\n&quot;);</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    printf (&quot;Sorting in arabic...\n&quot;);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), LineCmpArab);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    printf (&quot;Sorted in arabic. Printing...\n&quot;);</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    for (int i = 0; i &lt; hamlet.lines[i]; i++) {</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">        fput_line (hamlet.lines[i], output);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    printf (&quot;Printed arabic type. Printing default...\n&quot;);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    fputs (hamlet.textString, output);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    printf (&quot;Printed default&quot;);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00006">main.cpp:6</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a6dab97701c064b3a7184b2fc5160ceea"><div class="ttname"><a href="main_8cpp.html#a6dab97701c064b3a7184b2fc5160ceea">errCode</a></div><div class="ttdeci">enum errorCode errCode</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00001">main.cpp:3</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00006">main.cpp:6</a></div></div>
 <div class="ttc" id="aprotos_8h_html"><div class="ttname"><a href="protos_8h.html">protos.h</a></div></div>
 <div class="ttc" id="aprotos_8h_html_ab19a8e0fe3ea0ea5c7259400cb389056"><div class="ttname"><a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</a></div><div class="ttdeci">errorCode</div><div class="ttdoc">Enum for error codes.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00007">protos.h:7</a></div></div>
 <div class="ttc" id="aprotos_8h_html_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59"><div class="ttname"><a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">everything ok</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00009">protos.h:8</a></div></div>
+<div class="ttc" id="aprotos_8h_html_ab285374b18fe616378d88faa5eccf546"><div class="ttname"><a href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">read_text</a></div><div class="ttdeci">text read_text(const char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="read__text_8cpp_source.html#l00016">read_text.cpp:16</a></div></div>
+<div class="ttc" id="astructtext_html"><div class="ttname"><a href="structtext.html">text</a></div><div class="ttdoc">Stores text in format of string and array of line structures.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00033">protos.h:33</a></div></div>
+<div class="ttc" id="astructtext_html_acedd0976707f133eb8e729d778da7d37"><div class="ttname"><a href="structtext.html#acedd0976707f133eb8e729d778da7d37">text::textString</a></div><div class="ttdeci">char * textString</div><div class="ttdoc">char* that points to the beginning of a text</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00035">protos.h:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
