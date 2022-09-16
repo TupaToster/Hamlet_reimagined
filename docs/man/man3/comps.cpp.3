@@ -13,15 +13,118 @@ comps.cpp
 
 .in +1c
 .ti -1c
-.RI "int \fBcomp\fP (const void *fst, const void *scd)"
+.RI "bool \fBisAlphaNum\fP (const char c)"
 .br
+.RI "checks for c being a letter or number "
+.ti -1c
+.RI "int \fBlineCmp\fP (const void *fst, const void *scd)"
+.br
+.RI "Stright comp function\&. "
+.ti -1c
+.RI "int \fBlineCmpArab\fP (const void *fst, const void *scd)"
+.br
+.RI "compares strings left to right "
+.ti -1c
+.RI "int \fBcmpCore\fP (\fBline\fP line1, \fBline\fP line2, int delta)"
+.br
+.RI "Core of comparison of 2 strings with direction of ptr movement\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "int comp (const void * fst, const void * scd)"
+.SS "int cmpCore (\fBline\fP line1, \fBline\fP line2, int delta)"
 
 .PP
-Definition at line 3 of file comps\&.cpp\&.
+Core of comparison of 2 strings with direction of ptr movement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIline1\fP first line to compare 
+.br
+\fIline2\fP second line to compare 
+.br
+\fIdelta\fP direction and speed of ptr movement 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 if line1 < line2 
+.PP
+0 if line1 == line2 
+.PP
+1 if line1 > line2 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file comps\&.cpp\&.
+.SS "bool isAlphaNum (const char c)"
+
+.PP
+checks for c being a letter or number 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP char to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if is cool 
+.PP
+false if not cool 
+.RE
+.PP
+
+.PP
+Definition at line 8 of file comps\&.cpp\&.
+.SS "int lineCmp (const void * fst, const void * scd)"
+
+.PP
+Stright comp function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfst\fP first line to compare 
+.br
+\fIscd\fP scd line to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 if fst < scd 
+.PP
+0 if fst == scd 
+.PP
+1 if fst > scd 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file comps\&.cpp\&.
+.SS "int lineCmpArab (const void * fst, const void * scd)"
+
+.PP
+compares strings left to right 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfst\fP first line to compare 
+.br
+\fIscd\fP second line to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 if fst < scd 
+.PP
+0 if fst == scd 
+.PP
+1 if fst > scd 
+.RE
+.PP
+
+.PP
+Definition at line 33 of file comps\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

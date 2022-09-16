@@ -14,7 +14,13 @@
     <member refid="bufferize_8cpp_1a4533ca72f4105b135bffc875e44df8b1" kind="function"><name>bufferize</name></member>
   </compound>
   <compound refid="comps_8cpp" kind="file"><name>comps.cpp</name>
-    <member refid="comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452" kind="function"><name>comp</name></member>
+    <member refid="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" kind="function"><name>isAlphaNum</name></member>
+    <member refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" kind="function"><name>lineCmp</name></member>
+    <member refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kind="function"><name>lineCmpArab</name></member>
+    <member refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" kind="function"><name>cmpCore</name></member>
+  </compound>
+  <compound refid="fput__line_8cpp" kind="file"><name>fput_line.cpp</name>
+    <member refid="fput__line_8cpp_1aa530619aa1fa889500ebdaaa7bef054f" kind="function"><name>fput_line</name></member>
   </compound>
   <compound refid="get__size_8cpp" kind="file"><name>get_size.cpp</name>
     <member refid="get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
@@ -40,6 +46,11 @@
     <member refid="protos_8h_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
     <member refid="protos_8h_1a4533ca72f4105b135bffc875e44df8b1" kind="function"><name>bufferize</name></member>
     <member refid="protos_8h_1ab285374b18fe616378d88faa5eccf546" kind="function"><name>read_text</name></member>
+    <member refid="protos_8h_1aea547ef49920c0686a41a0144bed2854" kind="function"><name>isAlphaNum</name></member>
+    <member refid="protos_8h_1a4f2ba23eb402c4479ab5d36e0c39c80b" kind="function"><name>lineCmp</name></member>
+    <member refid="protos_8h_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kind="function"><name>lineCmpArab</name></member>
+    <member refid="protos_8h_1a84391bbe7626605eb3ed51f42542a0e6" kind="function"><name>cmpCore</name></member>
+    <member refid="protos_8h_1aa530619aa1fa889500ebdaaa7bef054f" kind="function"><name>fput_line</name></member>
   </compound>
   <compound refid="read__text_8cpp" kind="file"><name>read_text.cpp</name>
     <member refid="read__text_8cpp_1ab285374b18fe616378d88faa5eccf546" kind="function"><name>read_text</name></member>

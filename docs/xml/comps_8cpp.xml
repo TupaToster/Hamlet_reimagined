@@ -41,11 +41,43 @@
       </node>
     </incdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isAlphaNum</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>isAlphaNum</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>checks for c being a letter or number </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if is cool </para>
+</simplesect>
+<simplesect kind="return"><para>false if not cool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comps.cpp" line="8" column="6" bodyfile="comps.cpp" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int comp</definition>
+        <definition>int lineCmp</definition>
         <argsstring>(const void *fst, const void *scd)</argsstring>
-        <name>comp</name>
+        <name>lineCmp</name>
         <param>
           <type>const void *</type>
           <declname>fst</declname>
@@ -55,12 +87,141 @@
           <declname>scd</declname>
         </param>
         <briefdescription>
+<para>Stright comp function. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first line to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scd line to compare </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1 if fst &lt; scd </para>
+</simplesect>
+<simplesect kind="return"><para>0 if fst == scd </para>
+</simplesect>
+<simplesect kind="return"><para>1 if fst &gt; scd </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="comps.cpp" line="3" column="5" bodyfile="comps.cpp" bodystart="3" bodyend="6"/>
+        <location file="comps.cpp" line="22" column="5" bodyfile="comps.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lineCmpArab</definition>
+        <argsstring>(const void *fst, const void *scd)</argsstring>
+        <name>lineCmpArab</name>
+        <param>
+          <type>const void *</type>
+          <declname>fst</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>scd</declname>
+        </param>
+        <briefdescription>
+<para>compares strings left to right </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first line to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second line to compare </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1 if fst &lt; scd </para>
+</simplesect>
+<simplesect kind="return"><para>0 if fst == scd </para>
+</simplesect>
+<simplesect kind="return"><para>1 if fst &gt; scd </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comps.cpp" line="33" column="5" bodyfile="comps.cpp" bodystart="33" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cmpCore</definition>
+        <argsstring>(line line1, line line2, int delta)</argsstring>
+        <name>cmpCore</name>
+        <param>
+          <type><ref refid="structline" kindref="compound">line</ref></type>
+          <declname>line1</declname>
+        </param>
+        <param>
+          <type><ref refid="structline" kindref="compound">line</ref></type>
+          <declname>line2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Core of comparison of 2 strings with direction of ptr movement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first line to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second line to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction and speed of ptr movement </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1 if line1 &lt; line2 </para>
+</simplesect>
+<simplesect kind="return"><para>0 if line1 == line2 </para>
+</simplesect>
+<simplesect kind="return"><para>1 if line1 &gt; line2 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="comps.cpp" line="63" column="5" bodyfile="comps.cpp" bodystart="63" bodyend="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -68,12 +229,67 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wcast-qual&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452" kindref="member">comp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>fst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>scd)<sp/>{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight></codeline>
+<codeline lineno="8" refid="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" kindref="member">isAlphaNum</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((c<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>and<sp/>c<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>or<sp/><sp/><sp/><sp/><sp/><sp/>(c<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal"><sp/>and<sp/>c<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>or<sp/><sp/><sp/><sp/><sp/><sp/>(c<sp/>&gt;=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>and<sp/>c<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;9&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" kindref="member">lineCmp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>fst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>scd)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" kindref="member">cmpCore</ref><sp/>(*(<ref refid="structline" kindref="compound">line</ref>*)<sp/>fst,<sp/>*(<ref refid="structline" kindref="compound">line</ref>*)<sp/>scd,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kindref="member">lineCmpArab</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>fst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>scd)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structline" kindref="compound">line</ref><sp/>line1<sp/>=<sp/>*(<ref refid="structline" kindref="compound">line</ref>*)<sp/>fst;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structline" kindref="compound">line</ref><sp/>line2<sp/>=<sp/>*(<ref refid="structline" kindref="compound">line</ref>*)<sp/>scd;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>--;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>--;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>--;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>--;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>=<sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref><sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>=<sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref><sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" kindref="member">cmpCore</ref><sp/>(line1,<sp/>line2,<sp/>-((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" kindref="member">cmpCore</ref><sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>line1,<sp/><ref refid="structline" kindref="compound">line</ref><sp/>line2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" kindref="member">isAlphaNum</ref><sp/>(*line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>))<sp/>line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="comps_8cpp_1aea547ef49920c0686a41a0144bed2854" kindref="member">isAlphaNum</ref><sp/>(*line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>))<sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>!=<sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>and<sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>!=<sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>and<sp/><sp/><sp/>*line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>==<sp/>*line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>==<sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref><sp/>and<sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>!=<sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>!=<sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref><sp/>and<sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>==<sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>1;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>==<sp/>line1.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref><sp/>and<sp/>line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>==<sp/>line2.<ref refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kindref="member">end</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><sp/><sp/>(*line1.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref><sp/>&lt;<sp/>*line2.<ref refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kindref="member">begin</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="comps.cpp"/>
   </compounddef>

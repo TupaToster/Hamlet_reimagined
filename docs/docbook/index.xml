@@ -12,6 +12,7 @@
     <title>File Documentation</title>
     <xi:include href="bufferize_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="comps_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fput__line_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="get__size_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="initializers__and__destructors_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

@@ -6,18 +6,212 @@
 </programlisting><simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>int <link linkend="_comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452">comp</link> (const void *fst, const void *scd)</para>
+            <listitem><para>bool <link linkend="_comps_8cpp_1aea547ef49920c0686a41a0144bed2854">isAlphaNum</link> (const char c)</para>
+
+<para>checks for c being a letter or number </para>
+</listitem>
+            <listitem><para>int <link linkend="_comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b">lineCmp</link> (const void *fst, const void *scd)</para>
+
+<para>Stright comp function. </para>
+</listitem>
+            <listitem><para>int <link linkend="_comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b">lineCmpArab</link> (const void *fst, const void *scd)</para>
+
+<para>compares strings left to right </para>
+</listitem>
+            <listitem><para>int <link linkend="_comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6">cmpCore</link> (<link linkend="_structline">line</link> line1, <link linkend="_structline">line</link> line2, int delta)</para>
+
+<para>Core of comparison of 2 strings with direction of ptr movement. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452"/>    <section>
-    <title>comp()</title>
-<indexterm><primary>comp</primary><secondary>comps.cpp</secondary></indexterm>
-<indexterm><primary>comps.cpp</primary><secondary>comp</secondary></indexterm>
-<para><computeroutput>int comp (const void * fst, const void * scd)</computeroutput></para><para>
-Definition at line 3 of file comps.cpp.</para>
+<anchor xml:id="_comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6"/>    <section>
+    <title>cmpCore()</title>
+<indexterm><primary>cmpCore</primary><secondary>comps.cpp</secondary></indexterm>
+<indexterm><primary>comps.cpp</primary><secondary>cmpCore</secondary></indexterm>
+<para><computeroutput>int cmpCore (<link linkend="_structline">line</link> line1, <link linkend="_structline">line</link> line2, int delta)</computeroutput></para><para>
+
+<para>Core of comparison of 2 strings with direction of ptr movement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>line1</entry>
+                                <entry>
+<para>first line to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>line2</entry>
+                                <entry>
+<para>second line to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>delta</entry>
+                                <entry>
+<para>direction and speed of ptr movement </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>-1 if line1 &lt; line2 </para>
+
+<para>0 if line1 == line2 </para>
+
+<para>1 if line1 &gt; line2 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 63 of file comps.cpp.</para>
+    </section><anchor xml:id="_comps_8cpp_1aea547ef49920c0686a41a0144bed2854"/>    <section>
+    <title>isAlphaNum()</title>
+<indexterm><primary>isAlphaNum</primary><secondary>comps.cpp</secondary></indexterm>
+<indexterm><primary>comps.cpp</primary><secondary>isAlphaNum</secondary></indexterm>
+<para><computeroutput>bool isAlphaNum (const char c)</computeroutput></para><para>
+
+<para>checks for c being a letter or number </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry>
+<para>char to check </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if is cool </para>
+
+<para>false if not cool </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8 of file comps.cpp.</para>
+    </section><anchor xml:id="_comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b"/>    <section>
+    <title>lineCmp()</title>
+<indexterm><primary>lineCmp</primary><secondary>comps.cpp</secondary></indexterm>
+<indexterm><primary>comps.cpp</primary><secondary>lineCmp</secondary></indexterm>
+<para><computeroutput>int lineCmp (const void * fst, const void * scd)</computeroutput></para><para>
+
+<para>Stright comp function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fst</entry>
+                                <entry>
+<para>first line to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>scd</entry>
+                                <entry>
+<para>scd line to compare </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>-1 if fst &lt; scd </para>
+
+<para>0 if fst == scd </para>
+
+<para>1 if fst &gt; scd </para>
+</formalpara>
+</para>
+<para>
+Definition at line 22 of file comps.cpp.</para>
+    </section><anchor xml:id="_comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b"/>    <section>
+    <title>lineCmpArab()</title>
+<indexterm><primary>lineCmpArab</primary><secondary>comps.cpp</secondary></indexterm>
+<indexterm><primary>comps.cpp</primary><secondary>lineCmpArab</secondary></indexterm>
+<para><computeroutput>int lineCmpArab (const void * fst, const void * scd)</computeroutput></para><para>
+
+<para>compares strings left to right </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fst</entry>
+                                <entry>
+<para>first line to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>scd</entry>
+                                <entry>
+<para>second line to compare </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>-1 if fst &lt; scd </para>
+
+<para>0 if fst == scd </para>
+
+<para>1 if fst &gt; scd </para>
+</formalpara>
+</para>
+<para>
+Definition at line 33 of file comps.cpp.</para>
 </section>
 </section>
 </section>

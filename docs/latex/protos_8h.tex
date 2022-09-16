@@ -39,7 +39,17 @@ size\+\_\+t \mbox{\hyperlink{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}{get\+\
 char $\ast$ \mbox{\hyperlink{protos_8h_a4533ca72f4105b135bffc875e44df8b1}{bufferize}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Bufferizes file input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_ab285374b18fe616378d88faa5eccf546}{read\+\_\+text}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Fills text type var with input from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fills text type var with input from file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{protos_8h_aea547ef49920c0686a41a0144bed2854}{is\+Alpha\+Num}} (const char c)
+\begin{DoxyCompactList}\small\item\em checks for c being a letter or number \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{protos_8h_a4f2ba23eb402c4479ab5d36e0c39c80b}{line\+Cmp}} (const void $\ast$fst, const void $\ast$scd)
+\begin{DoxyCompactList}\small\item\em Stright comp function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{protos_8h_ae4bf5b1ee57024f7acd7cb71a92d5f9b}{line\+Cmp\+Arab}} (const void $\ast$fst, const void $\ast$scd)
+\begin{DoxyCompactList}\small\item\em compares strings left to right \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}{cmp\+Core}} (\mbox{\hyperlink{structline}{line}} line1, \mbox{\hyperlink{structline}{line}} line2, int delta)
+\begin{DoxyCompactList}\small\item\em Core of comparison of 2 strings with direction of ptr movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}{fput\+\_\+line}} (\mbox{\hyperlink{structline}{line}} src, FILE $\ast$outfile)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -123,6 +133,46 @@ ptr to c-\/string with whole text of file
 
 Definition at line 8 of file bufferize.\+cpp.
 
+\mbox{\Hypertarget{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}\label{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}} 
+\index{protos.h@{protos.h}!cmpCore@{cmpCore}}
+\index{cmpCore@{cmpCore}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{cmpCore()}{cmpCore()}}
+{\footnotesize\ttfamily int cmp\+Core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{line1,  }\item[{\mbox{\hyperlink{structline}{line}}}]{line2,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+
+
+
+Core of comparison of 2 strings with direction of ptr movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line1} & first line to compare \\
+\hline
+{\em line2} & second line to compare \\
+\hline
+{\em delta} & direction and speed of ptr movement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if line1 $<$ line2 
+
+0 if line1 == line2 
+
+1 if line1 $>$ line2 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file comps.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}\label{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}} 
+\index{protos.h@{protos.h}!fput\_line@{fput\_line}}
+\index{fput\_line@{fput\_line}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{fput\_line()}{fput\_line()}}
+{\footnotesize\ttfamily void fput\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{src,  }\item[{FILE $\ast$}]{outfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file fput\+\_\+line.\+cpp.
+
 \mbox{\Hypertarget{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}\label{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}} 
 \index{protos.h@{protos.h}!get\_size@{get\_size}}
 \index{get\_size@{get\_size}!protos.h@{protos.h}}
@@ -143,7 +193,7 @@ sizeof file in chars
 \end{DoxyReturn}
 
 
-Definition at line 8 of file get\+\_\+size.\+cpp.
+Definition at line 10 of file get\+\_\+size.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}\label{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}} 
 \index{protos.h@{protos.h}!initLine@{initLine}}
@@ -183,6 +233,30 @@ Initializes a text type var.
 
 Definition at line 29 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
 
+\mbox{\Hypertarget{protos_8h_aea547ef49920c0686a41a0144bed2854}\label{protos_8h_aea547ef49920c0686a41a0144bed2854}} 
+\index{protos.h@{protos.h}!isAlphaNum@{isAlphaNum}}
+\index{isAlphaNum@{isAlphaNum}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{isAlphaNum()}{isAlphaNum()}}
+{\footnotesize\ttfamily bool is\+Alpha\+Num (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+checks for c being a letter or number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & char to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if is cool 
+
+false if not cool 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file comps.\+cpp.
+
 \mbox{\Hypertarget{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}\label{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}} 
 \index{protos.h@{protos.h}!killLine@{killLine}}
 \index{killLine@{killLine}!protos.h@{protos.h}}
@@ -221,6 +295,62 @@ Deinitializes a text type var.
 
 Definition at line 41 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
 
+\mbox{\Hypertarget{protos_8h_a4f2ba23eb402c4479ab5d36e0c39c80b}\label{protos_8h_a4f2ba23eb402c4479ab5d36e0c39c80b}} 
+\index{protos.h@{protos.h}!lineCmp@{lineCmp}}
+\index{lineCmp@{lineCmp}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{lineCmp()}{lineCmp()}}
+{\footnotesize\ttfamily int line\+Cmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{fst,  }\item[{const void $\ast$}]{scd }\end{DoxyParamCaption})}
+
+
+
+Stright comp function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fst} & first line to compare \\
+\hline
+{\em scd} & scd line to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if fst $<$ scd 
+
+0 if fst == scd 
+
+1 if fst $>$ scd 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file comps.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_ae4bf5b1ee57024f7acd7cb71a92d5f9b}\label{protos_8h_ae4bf5b1ee57024f7acd7cb71a92d5f9b}} 
+\index{protos.h@{protos.h}!lineCmpArab@{lineCmpArab}}
+\index{lineCmpArab@{lineCmpArab}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{lineCmpArab()}{lineCmpArab()}}
+{\footnotesize\ttfamily int line\+Cmp\+Arab (\begin{DoxyParamCaption}\item[{const void $\ast$}]{fst,  }\item[{const void $\ast$}]{scd }\end{DoxyParamCaption})}
+
+
+
+compares strings left to right 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fst} & first line to compare \\
+\hline
+{\em scd} & second line to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if fst $<$ scd 
+
+0 if fst == scd 
+
+1 if fst $>$ scd 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file comps.\+cpp.
+
 \mbox{\Hypertarget{protos_8h_ab285374b18fe616378d88faa5eccf546}\label{protos_8h_ab285374b18fe616378d88faa5eccf546}} 
 \index{protos.h@{protos.h}!read\_text@{read\_text}}
 \index{read\_text@{read\_text}!protos.h@{protos.h}}
@@ -241,5 +371,5 @@ text struct full of stuff
 \end{DoxyReturn}
 Fills text struct with\+: text\+String -\/ whole text of a file lines -\/ array of lines of file of type \mbox{[}begin, end) string\+Cnt -\/ amount of strings in file text\+Size -\/ sizeof text (by get\+\_\+size) 
 
-Definition at line 16 of file read\+\_\+text.\+cpp.
+Definition at line 14 of file read\+\_\+text.\+cpp.
 

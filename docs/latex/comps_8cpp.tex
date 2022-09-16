@@ -4,18 +4,124 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{comps_8cpp_a31d3002ec7ca6b283fd5668b7a362452}{comp}} (const void $\ast$fst, const void $\ast$scd)
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{comps_8cpp_aea547ef49920c0686a41a0144bed2854}{is\+Alpha\+Num}} (const char c)
+\begin{DoxyCompactList}\small\item\em checks for c being a letter or number \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{comps_8cpp_a4f2ba23eb402c4479ab5d36e0c39c80b}{line\+Cmp}} (const void $\ast$fst, const void $\ast$scd)
+\begin{DoxyCompactList}\small\item\em Stright comp function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{comps_8cpp_ae4bf5b1ee57024f7acd7cb71a92d5f9b}{line\+Cmp\+Arab}} (const void $\ast$fst, const void $\ast$scd)
+\begin{DoxyCompactList}\small\item\em compares strings left to right \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{comps_8cpp_a84391bbe7626605eb3ed51f42542a0e6}{cmp\+Core}} (\mbox{\hyperlink{structline}{line}} line1, \mbox{\hyperlink{structline}{line}} line2, int delta)
+\begin{DoxyCompactList}\small\item\em Core of comparison of 2 strings with direction of ptr movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{comps_8cpp_a31d3002ec7ca6b283fd5668b7a362452}\label{comps_8cpp_a31d3002ec7ca6b283fd5668b7a362452}} 
-\index{comps.cpp@{comps.cpp}!comp@{comp}}
-\index{comp@{comp}!comps.cpp@{comps.cpp}}
-\doxysubsubsection{\texorpdfstring{comp()}{comp()}}
-{\footnotesize\ttfamily int comp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{fst,  }\item[{const void $\ast$}]{scd }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{comps_8cpp_a84391bbe7626605eb3ed51f42542a0e6}\label{comps_8cpp_a84391bbe7626605eb3ed51f42542a0e6}} 
+\index{comps.cpp@{comps.cpp}!cmpCore@{cmpCore}}
+\index{cmpCore@{cmpCore}!comps.cpp@{comps.cpp}}
+\doxysubsubsection{\texorpdfstring{cmpCore()}{cmpCore()}}
+{\footnotesize\ttfamily int cmp\+Core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{line1,  }\item[{\mbox{\hyperlink{structline}{line}}}]{line2,  }\item[{int}]{delta }\end{DoxyParamCaption})}
 
 
 
-Definition at line 3 of file comps.\+cpp.
+Core of comparison of 2 strings with direction of ptr movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line1} & first line to compare \\
+\hline
+{\em line2} & second line to compare \\
+\hline
+{\em delta} & direction and speed of ptr movement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if line1 $<$ line2 
+
+0 if line1 == line2 
+
+1 if line1 $>$ line2 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file comps.\+cpp.
+
+\mbox{\Hypertarget{comps_8cpp_aea547ef49920c0686a41a0144bed2854}\label{comps_8cpp_aea547ef49920c0686a41a0144bed2854}} 
+\index{comps.cpp@{comps.cpp}!isAlphaNum@{isAlphaNum}}
+\index{isAlphaNum@{isAlphaNum}!comps.cpp@{comps.cpp}}
+\doxysubsubsection{\texorpdfstring{isAlphaNum()}{isAlphaNum()}}
+{\footnotesize\ttfamily bool is\+Alpha\+Num (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+checks for c being a letter or number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & char to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if is cool 
+
+false if not cool 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file comps.\+cpp.
+
+\mbox{\Hypertarget{comps_8cpp_a4f2ba23eb402c4479ab5d36e0c39c80b}\label{comps_8cpp_a4f2ba23eb402c4479ab5d36e0c39c80b}} 
+\index{comps.cpp@{comps.cpp}!lineCmp@{lineCmp}}
+\index{lineCmp@{lineCmp}!comps.cpp@{comps.cpp}}
+\doxysubsubsection{\texorpdfstring{lineCmp()}{lineCmp()}}
+{\footnotesize\ttfamily int line\+Cmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{fst,  }\item[{const void $\ast$}]{scd }\end{DoxyParamCaption})}
+
+
+
+Stright comp function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fst} & first line to compare \\
+\hline
+{\em scd} & scd line to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if fst $<$ scd 
+
+0 if fst == scd 
+
+1 if fst $>$ scd 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file comps.\+cpp.
+
+\mbox{\Hypertarget{comps_8cpp_ae4bf5b1ee57024f7acd7cb71a92d5f9b}\label{comps_8cpp_ae4bf5b1ee57024f7acd7cb71a92d5f9b}} 
+\index{comps.cpp@{comps.cpp}!lineCmpArab@{lineCmpArab}}
+\index{lineCmpArab@{lineCmpArab}!comps.cpp@{comps.cpp}}
+\doxysubsubsection{\texorpdfstring{lineCmpArab()}{lineCmpArab()}}
+{\footnotesize\ttfamily int line\+Cmp\+Arab (\begin{DoxyParamCaption}\item[{const void $\ast$}]{fst,  }\item[{const void $\ast$}]{scd }\end{DoxyParamCaption})}
+
+
+
+compares strings left to right 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fst} & first line to compare \\
+\hline
+{\em scd} & second line to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if fst $<$ scd 
+
+0 if fst == scd 
+
+1 if fst $>$ scd 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file comps.\+cpp.
 

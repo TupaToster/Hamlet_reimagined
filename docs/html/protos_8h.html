@@ -146,6 +146,20 @@ Functions</h2></td></tr>
 <tr class="memitem:ab285374b18fe616378d88faa5eccf546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtext.html">text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">read_text</a> (const char *filename)</td></tr>
 <tr class="memdesc:ab285374b18fe616378d88faa5eccf546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills text type var with input from file.  <a href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">More...</a><br /></td></tr>
 <tr class="separator:ab285374b18fe616378d88faa5eccf546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea547ef49920c0686a41a0144bed2854"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#aea547ef49920c0686a41a0144bed2854">isAlphaNum</a> (const char c)</td></tr>
+<tr class="memdesc:aea547ef49920c0686a41a0144bed2854"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks for c being a letter or number  <a href="protos_8h.html#aea547ef49920c0686a41a0144bed2854">More...</a><br /></td></tr>
+<tr class="separator:aea547ef49920c0686a41a0144bed2854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2ba23eb402c4479ab5d36e0c39c80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a4f2ba23eb402c4479ab5d36e0c39c80b">lineCmp</a> (const void *fst, const void *scd)</td></tr>
+<tr class="memdesc:a4f2ba23eb402c4479ab5d36e0c39c80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stright comp function.  <a href="protos_8h.html#a4f2ba23eb402c4479ab5d36e0c39c80b">More...</a><br /></td></tr>
+<tr class="separator:a4f2ba23eb402c4479ab5d36e0c39c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4bf5b1ee57024f7acd7cb71a92d5f9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ae4bf5b1ee57024f7acd7cb71a92d5f9b">lineCmpArab</a> (const void *fst, const void *scd)</td></tr>
+<tr class="memdesc:ae4bf5b1ee57024f7acd7cb71a92d5f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">compares strings left to right  <a href="protos_8h.html#ae4bf5b1ee57024f7acd7cb71a92d5f9b">More...</a><br /></td></tr>
+<tr class="separator:ae4bf5b1ee57024f7acd7cb71a92d5f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84391bbe7626605eb3ed51f42542a0e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a84391bbe7626605eb3ed51f42542a0e6">cmpCore</a> (<a class="el" href="structline.html">line</a> line1, <a class="el" href="structline.html">line</a> line2, int delta)</td></tr>
+<tr class="memdesc:a84391bbe7626605eb3ed51f42542a0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core of comparison of 2 strings with direction of ptr movement.  <a href="protos_8h.html#a84391bbe7626605eb3ed51f42542a0e6">More...</a><br /></td></tr>
+<tr class="separator:a84391bbe7626605eb3ed51f42542a0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa530619aa1fa889500ebdaaa7bef054f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#aa530619aa1fa889500ebdaaa7bef054f">fput_line</a> (<a class="el" href="structline.html">line</a> src, FILE *outfile)</td></tr>
+<tr class="separator:aa530619aa1fa889500ebdaaa7bef054f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a18b5ed1de200502d90a1d48be7842ca1"></a>
@@ -252,6 +266,87 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a84391bbe7626605eb3ed51f42542a0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84391bbe7626605eb3ed51f42542a0e6">&#9670;&nbsp;</a></span>cmpCore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cmpCore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structline.html">line</a>&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structline.html">line</a>&#160;</td>
+          <td class="paramname"><em>line2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Core of comparison of 2 strings with direction of ptr movement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line1</td><td>first line to compare </td></tr>
+    <tr><td class="paramname">line2</td><td>second line to compare </td></tr>
+    <tr><td class="paramname">delta</td><td>direction and speed of ptr movement </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 if line1 &lt; line2 </dd>
+<dd>
+0 if line1 == line2 </dd>
+<dd>
+1 if line1 &gt; line2 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00063">63</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa530619aa1fa889500ebdaaa7bef054f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa530619aa1fa889500ebdaaa7bef054f">&#9670;&nbsp;</a></span>fput_line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fput_line </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structline.html">line</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>outfile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fput__line_8cpp_source.html#l00003">3</a> of file <a class="el" href="fput__line_8cpp_source.html">fput_line.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ac87fbefe4ae9195d7ba3a7a38eed3fdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac87fbefe4ae9195d7ba3a7a38eed3fdb">&#9670;&nbsp;</a></span>get_size()</h2>
 
@@ -277,7 +372,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>sizeof file in chars </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="get__size_8cpp_source.html#l00008">8</a> of file <a class="el" href="get__size_8cpp_source.html">get_size.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="get__size_8cpp_source.html#l00010">10</a> of file <a class="el" href="get__size_8cpp_source.html">get_size.cpp</a>.</p>
 
 </div>
 </div>
@@ -337,6 +432,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aea547ef49920c0686a41a0144bed2854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea547ef49920c0686a41a0144bed2854">&#9670;&nbsp;</a></span>isAlphaNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAlphaNum </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checks for c being a letter or number </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>char to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if is cool </dd>
+<dd>
+false if not cool </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00008">8</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a89e5f11c20a0fe41e1fcee4c8fe3bcfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89e5f11c20a0fe41e1fcee4c8fe3bcfd">&#9670;&nbsp;</a></span>killLine()</h2>
 
@@ -393,6 +519,94 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4f2ba23eb402c4479ab5d36e0c39c80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2ba23eb402c4479ab5d36e0c39c80b">&#9670;&nbsp;</a></span>lineCmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lineCmp </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>fst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>scd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stright comp function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fst</td><td>first line to compare </td></tr>
+    <tr><td class="paramname">scd</td><td>scd line to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 if fst &lt; scd </dd>
+<dd>
+0 if fst == scd </dd>
+<dd>
+1 if fst &gt; scd </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00022">22</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae4bf5b1ee57024f7acd7cb71a92d5f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4bf5b1ee57024f7acd7cb71a92d5f9b">&#9670;&nbsp;</a></span>lineCmpArab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lineCmpArab </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>fst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>scd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>compares strings left to right </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fst</td><td>first line to compare </td></tr>
+    <tr><td class="paramname">scd</td><td>second line to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 if fst &lt; scd </dd>
+<dd>
+0 if fst == scd </dd>
+<dd>
+1 if fst &gt; scd </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00033">33</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab285374b18fe616378d88faa5eccf546"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab285374b18fe616378d88faa5eccf546">&#9670;&nbsp;</a></span>read_text()</h2>
 
@@ -419,7 +633,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>text struct full of stuff</dd></dl>
 <p>Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </p>
 
-<p class="definition">Definition at line <a class="el" href="read__text_8cpp_source.html#l00016">16</a> of file <a class="el" href="read__text_8cpp_source.html">read_text.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="read__text_8cpp_source.html#l00014">14</a> of file <a class="el" href="read__text_8cpp_source.html">read_text.cpp</a>.</p>
 
 </div>
 </div>

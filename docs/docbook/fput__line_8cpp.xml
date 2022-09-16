@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fput__line_8cpp" xml:lang="en-US">
+<title>fput_line.cpp File Reference</title>
+<indexterm><primary>fput_line.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_fput__line_8cpp_1aa530619aa1fa889500ebdaaa7bef054f">fput_line</link> (<link linkend="_structline">line</link> src, FILE *outfile)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_fput__line_8cpp_1aa530619aa1fa889500ebdaaa7bef054f"/>    <section>
+    <title>fput_line()</title>
+<indexterm><primary>fput_line</primary><secondary>fput_line.cpp</secondary></indexterm>
+<indexterm><primary>fput_line.cpp</primary><secondary>fput_line</secondary></indexterm>
+<para><computeroutput>void fput_line (<link linkend="_structline">line</link> src, FILE * outfile)</computeroutput></para><para>
+Definition at line 3 of file fput_line.cpp.</para>
+</section>
+</section>
+</section>

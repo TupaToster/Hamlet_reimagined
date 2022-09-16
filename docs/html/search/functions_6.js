@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['read_5ftext_45',['read_text',['../protos_8h.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp'],['../read__text_8cpp.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp']]]
+  ['linecmp_52',['lineCmp',['../comps_8cpp.html#a4f2ba23eb402c4479ab5d36e0c39c80b',1,'lineCmp(const void *fst, const void *scd):&#160;comps.cpp'],['../protos_8h.html#a4f2ba23eb402c4479ab5d36e0c39c80b',1,'lineCmp(const void *fst, const void *scd):&#160;comps.cpp']]],
+  ['linecmparab_53',['lineCmpArab',['../comps_8cpp.html#ae4bf5b1ee57024f7acd7cb71a92d5f9b',1,'lineCmpArab(const void *fst, const void *scd):&#160;comps.cpp'],['../protos_8h.html#ae4bf5b1ee57024f7acd7cb71a92d5f9b',1,'lineCmpArab(const void *fst, const void *scd):&#160;comps.cpp']]]
 ];
