@@ -17,6 +17,7 @@ clean:
 	clear
 
 run:
+	make
 	./Hamlet.exe hamlet out
 
 .PHONY: clean run

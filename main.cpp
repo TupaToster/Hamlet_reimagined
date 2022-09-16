@@ -26,36 +26,35 @@ int main (int argc, char* argv[]) {
 
     text hamlet = read_text(inName);
 
-    for (int i = 0; i < hamlet.stringCnt; i++) 
-        fput_line (hamlet.lines[i], stdout);
+    printf ("Sorting straight type...\n");
 
-    // printf ("Sorting straight type...\n");
+    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
 
-    // qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
+    printf ("Sorted straight type, printing...\n");
 
-    // printf ("Sorted straight type, printing...\n");
+    for (size_t i = 0; i < hamlet.stringCnt; i++) {
 
-    // for (int i = 0; i < hamlet.stringCnt; i++) {
+        fput_line (hamlet.lines[i], output);
+    }
 
-    //     fput_line (hamlet.lines[i], output);
-    // }
+    printf ("Printed straight type. Procceeding.\n");
+    fputs("----------------------------------------\n", output);
 
-    // printf ("Printed straight type. Procceeding.\n");
+    printf ("Sorting in arabic...\n");
 
-    // printf ("Sorting in arabic...\n");
+    //qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
 
-    // qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
+    printf ("Sorted in arabic. Printing...\n");
 
-    // printf ("Sorted in arabic. Printing...\n");
+    for (size_t i = 0; i < hamlet.stringCnt; i++) {
 
-    // for (int i = 0; i < hamlet.stringCnt; i++) {
+        fput_line (hamlet.lines[i], output);
+    }
 
-    //     fput_line (hamlet.lines[i], output);
-    // }
+    printf ("Printed arabic type. Printing default...\n");
+    fputs("----------------------------------------\n", output);
 
-    // printf ("Printed arabic type. Printing default...\n");
+    fputs (hamlet.textString, output);
 
-    // fputs (hamlet.textString, output);
-
-    // printf ("Printed default");
+    printf ("Printed default");
 }

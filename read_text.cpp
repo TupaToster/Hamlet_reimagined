@@ -17,7 +17,7 @@ text read_text (const char* filename) {
     initText (&retVal);
 
     retVal.textString = bufferize (filename);
- 
+
     retVal.textSize = strlen (retVal.textString);
 
     for (size_t i = 0; i < retVal.textSize; i++) {
