@@ -12,6 +12,7 @@ int main (int argc, char* argv[]) {
     char*  inName = NULL;
     char* outName = NULL;
 
+    FILE* output = NULL;
     if (argc == 3) {
 
         inName  = (char*) calloc (strlen (argv[1]) + 1, sizeof (char));
@@ -19,42 +20,42 @@ int main (int argc, char* argv[]) {
 
         outName = (char*) calloc (strlen (argv[2]) + 1, sizeof (char));
         strcpy (outName, argv[2]);
+
+        output = fopen (outName, "w");
     }
 
     text hamlet = read_text(inName);
 
-    printf ("%d", lineCmpArab ( (void*) (hamlet.lines), (void*) (hamlet.lines + 1)));
+    for (int i = 0; i < hamlet.stringCnt; i++) 
+        fput_line (hamlet.lines[i], stdout);
 
-/*
+    // printf ("Sorting straight type...\n");
 
-    printf ("Sorting straight type...\n");
-    
-    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
-    
-    printf ("Sorted straight type, printing...\n");
-    
-    for (int i = 0; i < hamlet.stringCnt; i++) {
+    // qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
 
-        fput_line (hamlet.lines[i], output);
-    }
-    
-    printf ("Printed straight type. Procceeding.\n");
+    // printf ("Sorted straight type, printing...\n");
 
-    printf ("Sorting in arabic...\n");
+    // for (int i = 0; i < hamlet.stringCnt; i++) {
 
-    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), LineCmpArab);
+    //     fput_line (hamlet.lines[i], output);
+    // }
 
-    printf ("Sorted in arabic. Printing...\n");
+    // printf ("Printed straight type. Procceeding.\n");
 
-    for (int i = 0; i < hamlet.lines[i]; i++) {
+    // printf ("Sorting in arabic...\n");
 
-        fput_line (hamlet.lines[i], output);
-    }
+    // qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
 
-    printf ("Printed arabic type. Printing default...\n");
+    // printf ("Sorted in arabic. Printing...\n");
 
-    fputs (hamlet.textString, output);
+    // for (int i = 0; i < hamlet.stringCnt; i++) {
 
-    printf ("Printed default");
-    */
+    //     fput_line (hamlet.lines[i], output);
+    // }
+
+    // printf ("Printed arabic type. Printing default...\n");
+
+    // fputs (hamlet.textString, output);
+
+    // printf ("Printed default");
 }

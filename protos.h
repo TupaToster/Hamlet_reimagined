@@ -59,3 +59,5 @@ int lineCmp (const void*fst, const void* scd);
 int lineCmpArab (const void*fst, const void* scd);
 
 int cmpCore (line line1, line line2, int delta);
+
+void fput_line (line src, FILE* outfile);
