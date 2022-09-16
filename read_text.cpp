@@ -1,5 +1,3 @@
-#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
-
 #include "protos.h"
 
 /*!
@@ -7,11 +5,11 @@
     \param filename name of file to fill from
     \return text struct full of stuff
 
-Fills text struct with:
-textString - whole text of a file
-lines - array of lines of file of type [begin, end)
-stringCnt - amount of strings in file
-textSize - sizeof text (by get_size)
+    Fills text struct with:
+    textString - whole text of a file
+    lines - array of lines of file of type [begin, end)
+    stringCnt - amount of strings in file
+    textSize - sizeof text (by get_size)
 */
 text read_text (const char* filename) {
 

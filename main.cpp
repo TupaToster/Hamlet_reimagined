@@ -1,8 +1,12 @@
 #include "protos.h"
 
+/// @brief Var to store error codes from functions
 enum errorCode errCode = OK;
 
-
+/// @brief Contains more than nothing
+/// @param argc number of args in command line
+/// @param argv array of args
+/// @return exit code of program
 int main (int argc, char* argv[]) {
 
     char*  inName = NULL;
@@ -19,7 +23,7 @@ int main (int argc, char* argv[]) {
 
     text hamlet = read_text(inName);
 
-    printf ("%s", hamlet.textString);
+    printf ("%d", lineCmpArab ( (void*) (hamlet.lines), (void*) (hamlet.lines + 1)));
 
 /*
 

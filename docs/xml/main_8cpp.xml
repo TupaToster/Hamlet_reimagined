@@ -106,7 +106,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>hamlet<sp/>=<sp/><ref refid="protos_8h_1ab285374b18fe616378d88faa5eccf546" kindref="member">read_text</ref>(inName);</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>hamlet.<ref refid="structtext_1acedd0976707f133eb8e729d778da7d37" kindref="member">textString</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="25"><highlight class="comment"></highlight></codeline>

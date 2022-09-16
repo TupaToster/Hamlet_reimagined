@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_40',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['killline_42',['killLine',['../initializers__and__destructors_8cpp.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp']]],
+  ['killtext_43',['killText',['../initializers__and__destructors_8cpp.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp']]]
 ];

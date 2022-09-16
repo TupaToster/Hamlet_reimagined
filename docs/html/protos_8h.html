@@ -144,6 +144,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4533ca72f4105b135bffc875e44df8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bufferizes file input.  <a href="protos_8h.html#a4533ca72f4105b135bffc875e44df8b1">More...</a><br /></td></tr>
 <tr class="separator:a4533ca72f4105b135bffc875e44df8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab285374b18fe616378d88faa5eccf546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtext.html">text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">read_text</a> (const char *filename)</td></tr>
+<tr class="memdesc:ab285374b18fe616378d88faa5eccf546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills text type var with input from file.  <a href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">More...</a><br /></td></tr>
 <tr class="separator:ab285374b18fe616378d88faa5eccf546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -407,10 +408,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\brief Fills text type var with input from file
-\param filename name of file to fill from
-\return text struct full of stuff
-</pre><p> Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </p>
+
+<p>Fills text type var with input from file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of file to fill from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>text struct full of stuff</dd></dl>
+<p>Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </p>
 
 <p class="definition">Definition at line <a class="el" href="read__text_8cpp_source.html#l00016">16</a> of file <a class="el" href="read__text_8cpp_source.html">read_text.cpp</a>.</p>
 

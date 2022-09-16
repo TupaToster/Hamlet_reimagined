@@ -13,6 +13,9 @@
   <compound refid="bufferize_8cpp" kind="file"><name>bufferize.cpp</name>
     <member refid="bufferize_8cpp_1a4533ca72f4105b135bffc875e44df8b1" kind="function"><name>bufferize</name></member>
   </compound>
+  <compound refid="comps_8cpp" kind="file"><name>comps.cpp</name>
+    <member refid="comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452" kind="function"><name>comp</name></member>
+  </compound>
   <compound refid="get__size_8cpp" kind="file"><name>get_size.cpp</name>
     <member refid="get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
   </compound>

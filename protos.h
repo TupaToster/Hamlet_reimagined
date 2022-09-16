@@ -51,3 +51,11 @@ size_t get_size (const char* filename);
 char* bufferize (const char* filename);
 
 text read_text (const char* filename);
+
+bool isAlphaNum (const char c);
+
+int lineCmp (const void*fst, const void* scd);
+
+int lineCmpArab (const void*fst, const void* scd);
+
+int cmpCore (line line1, line line2, int delta);

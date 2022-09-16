@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fsize_35',['get_size',['../get__size_8cpp.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb',1,'get_size(const char *filename):&#160;get_size.cpp'],['../protos_8h.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb',1,'get_size(const char *filename):&#160;get_size.cpp']]]
+  ['comp_38',['comp',['../comps_8cpp.html#a31d3002ec7ca6b283fd5668b7a362452',1,'comps.cpp']]]
 ];

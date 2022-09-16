@@ -15,20 +15,26 @@ read_text.cpp
 .ti -1c
 .RI "\fBtext\fP \fBread_text\fP (const char *filename)"
 .br
+.RI "Fills text type var with input from file\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
 .SS "\fBtext\fP read_text (const char * filename)"
 
 .PP
-.nf
-\brief Fills text type var with input from file
-\param filename name of file to fill from
-\return text struct full of stuff
-
-.fi
+Fills text type var with input from file\&. 
 .PP
- Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) 
+\fBParameters\fP
+.RS 4
+\fIfilename\fP name of file to fill from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+text struct full of stuff
+.RE
+.PP
+Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) 
 .PP
 Definition at line 16 of file read_text\&.cpp\&.
 .SH "Author"

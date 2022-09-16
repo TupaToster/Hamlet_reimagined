@@ -51,12 +51,21 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
+<para>Fills text type var with input from file. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>\brief Fills text type var with input from file
-\param filename name of file to fill from
-\return text struct full of stuff
-</verbatim> Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file to fill from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>text struct full of stuff</para>
+</simplesect>
+Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

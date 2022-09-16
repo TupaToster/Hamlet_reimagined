@@ -67,6 +67,8 @@
 <para>Bufferizes file input. </para>
 </listitem>
             <listitem><para><link linkend="_structtext">text</link> <link linkend="_protos_8h_1ab285374b18fe616378d88faa5eccf546">read_text</link> (const char *filename)</para>
+
+<para>Fills text type var with input from file. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -363,11 +365,37 @@ Definition at line 41 of file initializers_and_destructors.cpp.</para>
     <title>read_text()</title>
 <indexterm><primary>read_text</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>read_text</secondary></indexterm>
-<para><computeroutput><link linkend="_structtext">text</link> read_text (const char * filename)</computeroutput></para>
-<para><literallayout><computeroutput>\brief Fills text type var with input from file
-\param filename name of file to fill from
-\return text struct full of stuff
-</computeroutput></literallayout> Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
+<para><computeroutput><link linkend="_structtext">text</link> read_text (const char * filename)</computeroutput></para><para>
+
+<para>Fills text type var with input from file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>name of file to fill from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>text struct full of stuff</para>
+</formalpara>
+Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
 <para>
 Definition at line 16 of file read_text.cpp.</para>
 </section>

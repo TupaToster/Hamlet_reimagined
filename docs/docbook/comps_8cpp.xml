@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_comps_8cpp" xml:lang="en-US">
+<title>comps.cpp File Reference</title>
+<indexterm><primary>comps.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452">comp</link> (const void *fst, const void *scd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_comps_8cpp_1a31d3002ec7ca6b283fd5668b7a362452"/>    <section>
+    <title>comp()</title>
+<indexterm><primary>comp</primary><secondary>comps.cpp</secondary></indexterm>
+<indexterm><primary>comps.cpp</primary><secondary>comp</secondary></indexterm>
+<para><computeroutput>int comp (const void * fst, const void * scd)</computeroutput></para><para>
+Definition at line 3 of file comps.cpp.</para>
+</section>
+</section>
+</section>

@@ -1,3 +1,5 @@
+#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
+
 #include "protos.h"
 
 /*!
