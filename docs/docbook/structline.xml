@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structline" xml:lang="en-US">
+<title>line Struct Reference</title>
+<indexterm><primary>line</primary></indexterm>
+<para>
+
+<para>Struct to store lines of text in format [begin, end) </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;protos.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_structline_1a8aa4258c0f442b3c207ffe270aca4da6">begin</link> = NULL</para>
+
+<para>Ptr to the beginning. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_structline_1a5fa2b658adce1c935eee1f54b3d36e68">end</link> = NULL</para>
+
+<para>Ptr to the end. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct to store lines of text in format [begin, end) </para>
+<para>
+Definition at line 26 of file protos.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structline_1a8aa4258c0f442b3c207ffe270aca4da6"/>    <section>
+    <title>begin</title>
+<indexterm><primary>begin</primary><secondary>line</secondary></indexterm>
+<indexterm><primary>line</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>char* line::begin = NULL</computeroutput></para><para>
+
+<para>Ptr to the beginning. </para>
+</para>
+<para>
+Definition at line 28 of file protos.h.</para>
+    </section><anchor xml:id="_structline_1a5fa2b658adce1c935eee1f54b3d36e68"/>    <section>
+    <title>end</title>
+<indexterm><primary>end</primary><secondary>line</secondary></indexterm>
+<indexterm><primary>line</primary><secondary>end</secondary></indexterm>
+<para><computeroutput>char* line::end = NULL</computeroutput></para><para>
+
+<para>Ptr to the end. </para>
+</para>
+<para>
+Definition at line 29 of file protos.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_protos_8h">protos.h</link></section>
+</section>

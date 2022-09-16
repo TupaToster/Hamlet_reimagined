@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structtext" xml:lang="en-US">
+<title>text Struct Reference</title>
+<indexterm><primary>text</primary></indexterm>
+<para>
+
+<para>Stores text in format of string and array of line structures. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;protos.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_structtext_1acedd0976707f133eb8e729d778da7d37">textString</link> = NULL</para>
+
+<para>char* that points to the beginning of a text </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structtext_1a859639b4d548fb8e77b46962b44d6528">textSize</link> = 0</para>
+
+<para>size_t that declares sizeof text in chars </para>
+</listitem>
+            <listitem><para><link linkend="_structline">line</link> * <link linkend="_structtext_1a826ba5613feb94342be61f8cce1c6771">lines</link> = NULL</para>
+
+<para>ptr to a line array that stores text in a format of lines </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structtext_1ac9b610f2d15da2a601e4dc20d252270a">stringCnt</link> = 0</para>
+
+<para>size_t that indicates amount of lines in text </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Stores text in format of string and array of line structures. </para>
+<para>
+Definition at line 33 of file protos.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structtext_1a826ba5613feb94342be61f8cce1c6771"/>    <section>
+    <title>lines</title>
+<indexterm><primary>lines</primary><secondary>text</secondary></indexterm>
+<indexterm><primary>text</primary><secondary>lines</secondary></indexterm>
+<para><computeroutput><link linkend="_structline">line</link>* text::lines = NULL</computeroutput></para><para>
+
+<para>ptr to a line array that stores text in a format of lines </para>
+</para>
+<para>
+Definition at line 37 of file protos.h.</para>
+    </section><anchor xml:id="_structtext_1ac9b610f2d15da2a601e4dc20d252270a"/>    <section>
+    <title>stringCnt</title>
+<indexterm><primary>stringCnt</primary><secondary>text</secondary></indexterm>
+<indexterm><primary>text</primary><secondary>stringCnt</secondary></indexterm>
+<para><computeroutput>size_t text::stringCnt = 0</computeroutput></para><para>
+
+<para>size_t that indicates amount of lines in text </para>
+</para>
+<para>
+Definition at line 38 of file protos.h.</para>
+    </section><anchor xml:id="_structtext_1a859639b4d548fb8e77b46962b44d6528"/>    <section>
+    <title>textSize</title>
+<indexterm><primary>textSize</primary><secondary>text</secondary></indexterm>
+<indexterm><primary>text</primary><secondary>textSize</secondary></indexterm>
+<para><computeroutput>size_t text::textSize = 0</computeroutput></para><para>
+
+<para>size_t that declares sizeof text in chars </para>
+</para>
+<para>
+Definition at line 36 of file protos.h.</para>
+    </section><anchor xml:id="_structtext_1acedd0976707f133eb8e729d778da7d37"/>    <section>
+    <title>textString</title>
+<indexterm><primary>textString</primary><secondary>text</secondary></indexterm>
+<indexterm><primary>text</primary><secondary>textString</secondary></indexterm>
+<para><computeroutput>char* text::textString = NULL</computeroutput></para><para>
+
+<para>char* that points to the beginning of a text </para>
+</para>
+<para>
+Definition at line 35 of file protos.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_protos_8h">protos.h</link></section>
+</section>

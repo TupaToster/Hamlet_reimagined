@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtext" kind="struct" language="C++" prot="public">
+    <compoundname>text</compoundname>
+    <includes refid="protos_8h" local="no">protos.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtext_1acedd0976707f133eb8e729d778da7d37" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* text::textString</definition>
+        <argsstring></argsstring>
+        <name>textString</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>char* that points to the beginning of a text </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="35" column="10" bodyfile="protos.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1a859639b4d548fb8e77b46962b44d6528" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t text::textSize</definition>
+        <argsstring></argsstring>
+        <name>textSize</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>size_t that declares sizeof text in chars </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="36" column="12" bodyfile="protos.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1a826ba5613feb94342be61f8cce1c6771" prot="public" static="no" mutable="no">
+        <type><ref refid="structline" kindref="compound">line</ref> *</type>
+        <definition>line* text::lines</definition>
+        <argsstring></argsstring>
+        <name>lines</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>ptr to a line array that stores text in a format of lines </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="37" column="10" bodyfile="protos.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1ac9b610f2d15da2a601e4dc20d252270a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t text::stringCnt</definition>
+        <argsstring></argsstring>
+        <name>stringCnt</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>size_t that indicates amount of lines in text </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="38" column="12" bodyfile="protos.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Stores text in format of string and array of line structures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>text</label>
+        <link refid="structtext"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lines</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>line</label>
+        <link refid="structline"/>
+      </node>
+    </collaborationgraph>
+    <location file="protos.h" line="33" column="1" bodyfile="protos.h" bodystart="33" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structtext_1a826ba5613feb94342be61f8cce1c6771" prot="public" virt="non-virtual"><scope>text</scope><name>lines</name></member>
+      <member refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" prot="public" virt="non-virtual"><scope>text</scope><name>stringCnt</name></member>
+      <member refid="structtext_1a859639b4d548fb8e77b46962b44d6528" prot="public" virt="non-virtual"><scope>text</scope><name>textSize</name></member>
+      <member refid="structtext_1acedd0976707f133eb8e729d778da7d37" prot="public" virt="non-virtual"><scope>text</scope><name>textString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

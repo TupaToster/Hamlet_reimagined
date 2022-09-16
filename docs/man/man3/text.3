@@ -1,0 +1,66 @@
+.TH "text" 3 "Fri Sep 16 2022" "Version 2.28" "Hamlet_reimagined" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+text \- Stores text in format of string and array of line structures\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <protos\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "char * \fBtextString\fP = NULL"
+.br
+.RI "char* that points to the beginning of a text "
+.ti -1c
+.RI "size_t \fBtextSize\fP = 0"
+.br
+.RI "size_t that declares sizeof text in chars "
+.ti -1c
+.RI "\fBline\fP * \fBlines\fP = NULL"
+.br
+.RI "ptr to a line array that stores text in a format of lines "
+.ti -1c
+.RI "size_t \fBstringCnt\fP = 0"
+.br
+.RI "size_t that indicates amount of lines in text "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stores text in format of string and array of line structures\&. 
+.PP
+Definition at line 33 of file protos\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBline\fP* text::lines = NULL"
+
+.PP
+ptr to a line array that stores text in a format of lines 
+.PP
+Definition at line 37 of file protos\&.h\&.
+.SS "size_t text::stringCnt = 0"
+
+.PP
+size_t that indicates amount of lines in text 
+.PP
+Definition at line 38 of file protos\&.h\&.
+.SS "size_t text::textSize = 0"
+
+.PP
+size_t that declares sizeof text in chars 
+.PP
+Definition at line 36 of file protos\&.h\&.
+.SS "char* text::textString = NULL"
+
+.PP
+char* that points to the beginning of a text 
+.PP
+Definition at line 35 of file protos\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

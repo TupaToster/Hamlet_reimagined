@@ -1,0 +1,141 @@
+.TH "protos.h" 3 "Fri Sep 16 2022" "Version 2.28" "Hamlet_reimagined" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+protos.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <sys\\stat\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBline\fP"
+.br
+.RI "Struct to store lines of text in format [begin, end) "
+.ti -1c
+.RI "struct \fBtext\fP"
+.br
+.RI "Stores text in format of string and array of line structures\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBcheck\fP(cond,  retVal,  errType)"
+.br
+.RI "Checks for condition and if true returns retVal and writes errType to errCode\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBerrorCode\fP { \fBOK\fP = 0 }"
+.br
+.RI "Enum for error codes\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtext\fP \fBinitText\fP ()"
+.br
+.ti -1c
+.RI "\fBline\fP \fBinitLine\fP ()"
+.br
+.ti -1c
+.RI "void \fBkillText\fP (\fBtext\fP *target)"
+.br
+.RI "Deinitializes a text type var\&. "
+.ti -1c
+.RI "void \fBkillLine\fP (\fBline\fP *target)"
+.br
+.RI "Deinitializes a line type var\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define check(cond, retVal, errType)"
+\fBValue:\fP
+.PP
+.nf
+if (cond) {                          \
+                                     \
+    errCode = errType;               \
+    return retVal;                   \
+}
+.fi
+.PP
+Checks for condition and if true returns retVal and writes errType to errCode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcond\fP condition to check 
+.br
+\fIretVal\fP value to return 
+.br
+\fIerrType\fP error type to save 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file protos\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBerrorCode\fP"
+
+.PP
+Enum for error codes\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+everything ok 
+.PP
+Definition at line 7 of file protos\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBline\fP initLine ()"
+
+.SS "\fBtext\fP initText ()"
+
+.SS "void killLine (\fBline\fP * target)"
+
+.PP
+Deinitializes a line type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP line* to var to kill 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file initializers_and_destructors\&.cpp\&.
+.SS "void killText (\fBtext\fP * target)"
+
+.PP
+Deinitializes a text type var\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP text* to var to kill 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file initializers_and_destructors\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

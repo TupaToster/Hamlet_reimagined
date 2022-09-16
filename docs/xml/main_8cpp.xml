@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="protos_8h" local="yes">protos.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>sys\stat.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056" kindref="member">errorCode</ref></type>
+        <definition>enum errorCode errCode</definition>
+        <argsstring></argsstring>
+        <name>errCode</name>
+        <initializer>= <ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cpp" line="1" column="0" bodyfile="main.cpp" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cpp" line="6" column="5" bodyfile="main.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" refkind="member"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056" kindref="member">errorCode</ref><sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+</doxygen>

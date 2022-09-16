@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structline" kind="struct" language="C++" prot="public">
+    <compoundname>line</compoundname>
+    <includes refid="protos_8h" local="no">protos.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structline_1a8aa4258c0f442b3c207ffe270aca4da6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* line::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>Ptr to the beginning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="28" column="10" bodyfile="protos.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structline_1a5fa2b658adce1c935eee1f54b3d36e68" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* line::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>Ptr to the end. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="29" column="10" bodyfile="protos.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct to store lines of text in format [begin, end) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="protos.h" line="26" column="1" bodyfile="protos.h" bodystart="26" bodyend="30"/>
+    <listofallmembers>
+      <member refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" prot="public" virt="non-virtual"><scope>line</scope><name>begin</name></member>
+      <member refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" prot="public" virt="non-virtual"><scope>line</scope><name>end</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

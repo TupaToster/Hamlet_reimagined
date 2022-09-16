@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="structline" kind="struct"><name>line</name>
+    <member refid="structline_1a8aa4258c0f442b3c207ffe270aca4da6" kind="variable"><name>begin</name></member>
+    <member refid="structline_1a5fa2b658adce1c935eee1f54b3d36e68" kind="variable"><name>end</name></member>
+  </compound>
+  <compound refid="structtext" kind="struct"><name>text</name>
+    <member refid="structtext_1acedd0976707f133eb8e729d778da7d37" kind="variable"><name>textString</name></member>
+    <member refid="structtext_1a859639b4d548fb8e77b46962b44d6528" kind="variable"><name>textSize</name></member>
+    <member refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kind="variable"><name>lines</name></member>
+    <member refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kind="variable"><name>stringCnt</name></member>
+  </compound>
+  <compound refid="initializers__and__destructors_8cpp" kind="file"><name>initializers_and_destructors.cpp</name>
+    <member refid="initializers__and__destructors_8cpp_1ab48cdaf07893d47c1ec98368a022dfd8" kind="function"><name>initLine</name></member>
+    <member refid="initializers__and__destructors_8cpp_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd" kind="function"><name>killLine</name></member>
+    <member refid="initializers__and__destructors_8cpp_1a3cc9f6add828df4782ed77208dd37977" kind="function"><name>initText</name></member>
+    <member refid="initializers__and__destructors_8cpp_1a5cd4fdc44f5aab88c2b2f6072dd05ae9" kind="function"><name>killText</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kind="variable"><name>errCode</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="protos_8h" kind="file"><name>protos.h</name>
+    <member refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kind="define"><name>check</name></member>
+    <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056" kind="enum"><name>errorCode</name></member>
+    <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
+    <member refid="protos_8h_1ab563e906068c4ab8853e8b07c074710f" kind="function"><name>initText</name></member>
+    <member refid="protos_8h_1a278f7d7631584b1f971fd69034e037d2" kind="function"><name>initLine</name></member>
+    <member refid="protos_8h_1a5cd4fdc44f5aab88c2b2f6072dd05ae9" kind="function"><name>killText</name></member>
+    <member refid="protos_8h_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd" kind="function"><name>killLine</name></member>
+  </compound>
+</doxygenindex>

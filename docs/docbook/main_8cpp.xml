@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>main.cpp File Reference</title>
+<indexterm><primary>main.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</link> <link linkend="_main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea">errCode</link> = <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+Definition at line 6 of file main.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea"/>    <section>
+    <title>errCode</title>
+<indexterm><primary>errCode</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>errCode</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</link> errCode = <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link></computeroutput></para><para>
+Definition at line 1 of file main.cpp.</para>
+</section>
+</section>
+</section>

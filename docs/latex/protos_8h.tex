@@ -1,0 +1,147 @@
+\hypertarget{protos_8h}{}\doxysection{protos.\+h File Reference}
+\label{protos_8h}\index{protos.h@{protos.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$sys\textbackslash{}stat.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structline}{line}}
+\begin{DoxyCompactList}\small\item\em Struct to store lines of text in format \mbox{[}begin, end) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtext}{text}}
+\begin{DoxyCompactList}\small\item\em Stores text in format of string and array of line structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}{check}}(cond,  ret\+Val,  err\+Type)
+\begin{DoxyCompactList}\small\item\em Checks for condition and if true returns ret\+Val and writes err\+Type to err\+Code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}} \{ \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_ab563e906068c4ab8853e8b07c074710f}{init\+Text}} ()
+\item 
+\mbox{\hyperlink{structline}{line}} \mbox{\hyperlink{protos_8h_a278f7d7631584b1f971fd69034e037d2}{init\+Line}} ()
+\item 
+void \mbox{\hyperlink{protos_8h_a5cd4fdc44f5aab88c2b2f6072dd05ae9}{kill\+Text}} (\mbox{\hyperlink{structtext}{text}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Deinitializes a text type var. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}{kill\+Line}} (\mbox{\hyperlink{structline}{line}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Deinitializes a line type var. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}\label{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}} 
+\index{protos.h@{protos.h}!check@{check}}
+\index{check@{check}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{check}{check}}
+{\footnotesize\ttfamily \#define check(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{ret\+Val,  }\item[{}]{err\+Type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (cond) \{                          \(\backslash\)}
+\DoxyCodeLine{                                     \(\backslash\)}
+\DoxyCodeLine{    errCode = errType;               \(\backslash\)}
+\DoxyCodeLine{    return retVal;                   \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Checks for condition and if true returns ret\+Val and writes err\+Type to err\+Code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & condition to check \\
+\hline
+{\em ret\+Val} & value to return \\
+\hline
+{\em err\+Type} & error type to save \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file protos.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}} 
+\index{protos.h@{protos.h}!errorCode@{errorCode}}
+\index{errorCode@{errorCode}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{errorCode}{errorCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}}}
+
+
+
+Enum for error codes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!protos.h@{protos.h}}\index{protos.h@{protos.h}!OK@{OK}}}\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}} 
+OK&everything ok \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 7 of file protos.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{protos_8h_a278f7d7631584b1f971fd69034e037d2}\label{protos_8h_a278f7d7631584b1f971fd69034e037d2}} 
+\index{protos.h@{protos.h}!initLine@{initLine}}
+\index{initLine@{initLine}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{initLine()}{initLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structline}{line}} init\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{protos_8h_ab563e906068c4ab8853e8b07c074710f}\label{protos_8h_ab563e906068c4ab8853e8b07c074710f}} 
+\index{protos.h@{protos.h}!initText@{initText}}
+\index{initText@{initText}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{initText()}{initText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtext}{text}} init\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}\label{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}} 
+\index{protos.h@{protos.h}!killLine@{killLine}}
+\index{killLine@{killLine}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{killLine()}{killLine()}}
+{\footnotesize\ttfamily void kill\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Deinitializes a line type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & line$\ast$ to var to kill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a5cd4fdc44f5aab88c2b2f6072dd05ae9}\label{protos_8h_a5cd4fdc44f5aab88c2b2f6072dd05ae9}} 
+\index{protos.h@{protos.h}!killText@{killText}}
+\index{killText@{killText}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{killText()}{killText()}}
+{\footnotesize\ttfamily void kill\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Deinitializes a text type var. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & text$\ast$ to var to kill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file initializers\+\_\+and\+\_\+destructors.\+cpp.
+

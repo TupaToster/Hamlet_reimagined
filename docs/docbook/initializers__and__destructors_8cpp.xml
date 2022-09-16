@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_initializers__and__destructors_8cpp" xml:lang="en-US">
+<title>initializers_and_destructors.cpp File Reference</title>
+<indexterm><primary>initializers_and_destructors.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_initializers__and__destructors_8cpp_1ab48cdaf07893d47c1ec98368a022dfd8">initLine</link> (<link linkend="_structline">line</link> *target)</para>
+
+<para>Initializes a line type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_initializers__and__destructors_8cpp_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd">killLine</link> (<link linkend="_structline">line</link> *target)</para>
+
+<para>Deinitializes a line type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_initializers__and__destructors_8cpp_1a3cc9f6add828df4782ed77208dd37977">initText</link> (<link linkend="_structtext">text</link> *target)</para>
+
+<para>Initializes a text type var. </para>
+</listitem>
+            <listitem><para>void <link linkend="_initializers__and__destructors_8cpp_1a5cd4fdc44f5aab88c2b2f6072dd05ae9">killText</link> (<link linkend="_structtext">text</link> *target)</para>
+
+<para>Deinitializes a text type var. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_initializers__and__destructors_8cpp_1ab48cdaf07893d47c1ec98368a022dfd8"/>    <section>
+    <title>initLine()</title>
+<indexterm><primary>initLine</primary><secondary>initializers_and_destructors.cpp</secondary></indexterm>
+<indexterm><primary>initializers_and_destructors.cpp</primary><secondary>initLine</secondary></indexterm>
+<para><computeroutput>void initLine (<link linkend="_structline">line</link> * target)</computeroutput></para><para>
+
+<para>Initializes a line type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>line* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 8 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_initializers__and__destructors_8cpp_1a3cc9f6add828df4782ed77208dd37977"/>    <section>
+    <title>initText()</title>
+<indexterm><primary>initText</primary><secondary>initializers_and_destructors.cpp</secondary></indexterm>
+<indexterm><primary>initializers_and_destructors.cpp</primary><secondary>initText</secondary></indexterm>
+<para><computeroutput>void initText (<link linkend="_structtext">text</link> * target)</computeroutput></para><para>
+
+<para>Initializes a text type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>text* to var to init </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 29 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_initializers__and__destructors_8cpp_1a89e5f11c20a0fe41e1fcee4c8fe3bcfd"/>    <section>
+    <title>killLine()</title>
+<indexterm><primary>killLine</primary><secondary>initializers_and_destructors.cpp</secondary></indexterm>
+<indexterm><primary>initializers_and_destructors.cpp</primary><secondary>killLine</secondary></indexterm>
+<para><computeroutput>void killLine (<link linkend="_structline">line</link> * target)</computeroutput></para><para>
+
+<para>Deinitializes a line type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>line* to var to kill </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 18 of file initializers_and_destructors.cpp.</para>
+    </section><anchor xml:id="_initializers__and__destructors_8cpp_1a5cd4fdc44f5aab88c2b2f6072dd05ae9"/>    <section>
+    <title>killText()</title>
+<indexterm><primary>killText</primary><secondary>initializers_and_destructors.cpp</secondary></indexterm>
+<indexterm><primary>initializers_and_destructors.cpp</primary><secondary>killText</secondary></indexterm>
+<para><computeroutput>void killText (<link linkend="_structtext">text</link> * target)</computeroutput></para><para>
+
+<para>Deinitializes a text type var. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>target</entry>
+                                <entry>
+<para>text* to var to kill </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 41 of file initializers_and_destructors.cpp.</para>
+</section>
+</section>
+</section>
