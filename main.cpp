@@ -42,7 +42,7 @@ int main (int argc, char* argv[]) {
 
     printf ("Sorting in arabic...\n");
 
-    //qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
+    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
 
     printf ("Sorted in arabic. Printing...\n");
 
