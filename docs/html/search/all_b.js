@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['read_5ftext_27',['read_text',['../protos_8h.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp'],['../read__text_8cpp.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp']]],
-  ['read_5ftext_2ecpp_28',['read_text.cpp',['../read__text_8cpp.html',1,'']]]
+  ['protos_2eh_32',['protos.h',['../protos_8h.html',1,'']]],
+  ['puzirek_33',['puzirek',['../my__sort_8cpp.html#adcf2fd0b7819099f97e3f10bfa5a7585',1,'puzirek(void *begin, size_t len, size_t elemSize, int(*comp)(const void *, const void *)):&#160;my_sort.cpp'],['../protos_8h.html#a05fa557fce910daa1163100098899ae7',1,'puzirek(void *, size_t, size_t, int(*)(const void *, const void *)):&#160;my_sort.cpp']]]
 ];

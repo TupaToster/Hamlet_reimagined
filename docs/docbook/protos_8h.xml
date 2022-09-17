@@ -33,6 +33,9 @@
     <title>Enumerations    </title>
         <itemizedlist>
             <listitem><para>enum <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</link> { <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link> = 0
+, <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984">BAD_ALLOC</link> = -1
+, <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa">FOPEN_ERROR</link> = -2
+, <link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9">INPUT_ERROR</link> = -3
  }</para>
 
 <para>Enum for error codes. </para>
@@ -86,7 +89,20 @@
 
 <para>Core of comparison of 2 strings with direction of ptr movement. </para>
 </listitem>
-            <listitem><para>void <link linkend="_protos_8h_1aa530619aa1fa889500ebdaaa7bef054f">fput_line</link> (<link linkend="_structline">line</link> src, FILE *outfile)</para>
+            <listitem><para>void <link linkend="_protos_8h_1af7064d4ad3486b2eeeee94807091bad1">fputLine</link> (<link linkend="_structline">line</link> src, FILE *outfile)</para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a05fa557fce910daa1163100098899ae7">puzirek</link> (void *, size_t, size_t, int(*)(const void *, const void *))</para>
+
+<para>Sorts. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</link> <link linkend="_protos_8h_1a31ca5aca24614aec217357a437432d87">errCode</link></para>
+
+<para>Var to store error codes from functions. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -141,7 +157,7 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 18 of file protos.h.</para>
+Definition at line 22 of file protos.h.</para>
 </section>
 </section>
 <section>
@@ -164,6 +180,18 @@ Definition at line 18 of file protos.h.</para>
 <indexterm><primary>protos.h</primary><secondary>OK</secondary></indexterm>
 <anchor xml:id="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59"/>OK</entry><entry>
 <para>everything ok </para>
+</entry></row><row><entry><indexterm><primary>BAD_ALLOC</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>BAD_ALLOC</secondary></indexterm>
+<anchor xml:id="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984"/>BAD_ALLOC</entry><entry>
+<para>Allocation failed. </para>
+</entry></row><row><entry><indexterm><primary>FOPEN_ERROR</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>FOPEN_ERROR</secondary></indexterm>
+<anchor xml:id="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa"/>FOPEN_ERROR</entry><entry>
+<para>Error opening file. </para>
+</entry></row><row><entry><indexterm><primary>INPUT_ERROR</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>INPUT_ERROR</secondary></indexterm>
+<anchor xml:id="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9"/>INPUT_ERROR</entry><entry>
+<para>Error in input function. </para>
 </entry></row>    </tbody>
     </tgroup>
 </informaltable>
@@ -262,13 +290,13 @@ Parameters                    </title>
 </formalpara>
 </para>
 <para>
-Definition at line 63 of file comps.cpp.</para>
-    </section><anchor xml:id="_protos_8h_1aa530619aa1fa889500ebdaaa7bef054f"/>    <section>
-    <title>fput_line()</title>
-<indexterm><primary>fput_line</primary><secondary>protos.h</secondary></indexterm>
-<indexterm><primary>protos.h</primary><secondary>fput_line</secondary></indexterm>
-<para><computeroutput>void fput_line (<link linkend="_structline">line</link> src, FILE * outfile)</computeroutput></para><para>
-Definition at line 3 of file fput_line.cpp.</para>
+Definition at line 64 of file comps.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1af7064d4ad3486b2eeeee94807091bad1"/>    <section>
+    <title>fputLine()</title>
+<indexterm><primary>fputLine</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>fputLine</secondary></indexterm>
+<para><computeroutput>void fputLine (<link linkend="_structline">line</link> src, FILE * outfile)</computeroutput></para><para>
+Definition at line 3 of file fputLine.cpp.</para>
     </section><anchor xml:id="_protos_8h_1ac87fbefe4ae9195d7ba3a7a38eed3fdb"/>    <section>
     <title>get_size()</title>
 <indexterm><primary>get_size</primary><secondary>protos.h</secondary></indexterm>
@@ -571,6 +599,57 @@ Parameters                    </title>
 </para>
 <para>
 Definition at line 33 of file comps.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a05fa557fce910daa1163100098899ae7"/>    <section>
+    <title>puzirek()</title>
+<indexterm><primary>puzirek</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>puzirek</secondary></indexterm>
+<para><computeroutput>void puzirek (void * begin, size_t len, size_t elemSize, int(*)(const void *, const void *) comp)</computeroutput></para><para>
+
+<para>Sorts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>begin</entry>
+                                <entry>
+<para>void* to start of array </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length in elements </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>elemSize</entry>
+                                <entry>
+<para>length of one elem in bytes </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>comp</entry>
+                                <entry>
+<para>func to compare em all </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11 of file my_sort.cpp.</para>
     </section><anchor xml:id="_protos_8h_1ab285374b18fe616378d88faa5eccf546"/>    <section>
     <title>read_text()</title>
 <indexterm><primary>read_text</primary><secondary>protos.h</secondary></indexterm>
@@ -608,6 +687,20 @@ Parameters                    </title>
 Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
 <para>
 Definition at line 14 of file read_text.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_protos_8h_1a31ca5aca24614aec217357a437432d87"/>    <section>
+    <title>errCode</title>
+<indexterm><primary>errCode</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>errCode</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</link> errCode<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>Var to store error codes from functions. </para>
+</para>
+<para>
+Definition at line 1 of file main.cpp.</para>
 </section>
 </section>
 </section>

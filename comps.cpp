@@ -21,7 +21,7 @@ bool isAlphaNum (const char c) {
 /// @return 1 if fst > scd
 int lineCmp (const void* fst, const void* scd) {
 
-    return cmpCore (*(line*) fst, *(line*) scd, sizeof (char));
+    return cmpCore (*((line*) fst), *((line*) scd), sizeof (char));
 }
 
 /// @brief compares strings left to right
@@ -32,14 +32,8 @@ int lineCmp (const void* fst, const void* scd) {
 /// @return 1 if fst > scd
 int lineCmpArab (const void* fst, const void* scd) {
 
-    line line1 = *(line*) fst;
-    line line2 = *(line*) scd;
-
-    line1.begin--;
-    line2.begin--;
-
-    line1.end--;
-    line2.end--;
+    line line1 = *((line*) fst);
+    line line2 = *((line*) scd);
 
     char* temp = line1.begin;
     line1.begin = line1.end;
@@ -49,7 +43,14 @@ int lineCmpArab (const void* fst, const void* scd) {
     line2.begin = line2.end;
     line2.end = temp;
 
-    return cmpCore (line1, line2, -((int) sizeof (char)));
+    line1.begin--;
+    line2.begin--;
+
+    line1.end--;
+    line2.end--;
+
+
+    return cmpCore (line1, line2, -1);
 }
 
 
@@ -62,8 +63,8 @@ int lineCmpArab (const void* fst, const void* scd) {
 /// @return 1 if line1 > line2
 int cmpCore (line line1, line line2, int delta) {
 
-    while (!isAlphaNum (*line1.begin)) line1.begin += delta;
-    while (!isAlphaNum (*line2.begin)) line2.begin += delta;
+    while (line1.begin != line1.end and !isAlphaNum (*line1.begin)) line1.begin += delta;
+    while (line2.begin != line2.end and !isAlphaNum (*line2.begin)) line2.begin += delta;
 
     while (line1.begin != line1.end
     and    line2.begin != line2.end

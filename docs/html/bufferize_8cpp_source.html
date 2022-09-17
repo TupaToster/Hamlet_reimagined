@@ -95,19 +95,25 @@ $(document).ready(function(){initNavTree('bufferize_8cpp_source.html',''); initR
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">size_t</span> fSize = <a class="code" href="get__size_8cpp.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</a> (filename);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">char</span>* txt = (<span class="keywordtype">char</span>*) calloc (fSize + 2, <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>));</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    txt++;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    FILE* fIn = fopen (filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    fread (txt, <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>), fSize, fIn);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">check</a> (txt == NULL, NULL, <a class="code" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984">BAD_ALLOC</a>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    txt++;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    FILE* fIn = fopen (filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">check</a> (fIn == NULL, NULL, <a class="code" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa">FOPEN_ERROR</a>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    txt[fSize] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">check</a> (fread (txt, <span class="keyword">sizeof</span> (<span class="keywordtype">char</span>), fSize, fIn) != fSize, NULL, <a class="code" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9">INPUT_ERROR</a>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> txt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    txt[fSize] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> txt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="ttc" id="abufferize_8cpp_html_a4533ca72f4105b135bffc875e44df8b1"><div class="ttname"><a href="bufferize_8cpp.html#a4533ca72f4105b135bffc875e44df8b1">bufferize</a></div><div class="ttdeci">char * bufferize(const char *filename)</div><div class="ttdoc">Bufferizes file input.</div><div class="ttdef"><b>Definition:</b> <a href="bufferize_8cpp_source.html#l00008">bufferize.cpp:8</a></div></div>
 <div class="ttc" id="aget__size_8cpp_html_ac87fbefe4ae9195d7ba3a7a38eed3fdb"><div class="ttname"><a href="get__size_8cpp.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</a></div><div class="ttdeci">size_t get_size(const char *filename)</div><div class="ttdoc">Returns size of file in chars.</div><div class="ttdef"><b>Definition:</b> <a href="get__size_8cpp_source.html#l00010">get_size.cpp:10</a></div></div>
 <div class="ttc" id="aprotos_8h_html"><div class="ttname"><a href="protos_8h.html">protos.h</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a18b5ed1de200502d90a1d48be7842ca1"><div class="ttname"><a href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">check</a></div><div class="ttdeci">#define check(cond, retVal, errType)</div><div class="ttdoc">Checks for condition and if true returns retVal and writes errType to errCode.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00022">protos.h:22</a></div></div>
+<div class="ttc" id="aprotos_8h_html_ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984"><div class="ttname"><a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984">BAD_ALLOC</a></div><div class="ttdeci">@ BAD_ALLOC</div><div class="ttdoc">Allocation failed.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00009">protos.h:9</a></div></div>
+<div class="ttc" id="aprotos_8h_html_ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa"><div class="ttname"><a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa">FOPEN_ERROR</a></div><div class="ttdeci">@ FOPEN_ERROR</div><div class="ttdoc">Error opening file.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00010">protos.h:10</a></div></div>
+<div class="ttc" id="aprotos_8h_html_ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9"><div class="ttname"><a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9">INPUT_ERROR</a></div><div class="ttdeci">@ INPUT_ERROR</div><div class="ttdoc">Error in input function.</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00012">protos.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

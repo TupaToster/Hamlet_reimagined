@@ -88,7 +88,8 @@ $(document).ready(function(){initNavTree('protos_8h.html',''); initResizable(); 
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">protos.h File Reference</div>  </div>
 </div><!--header-->
@@ -119,6 +120,9 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ab19a8e0fe3ea0ea5c7259400cb389056"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</a> { <a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0
+, <a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984">BAD_ALLOC</a> = -1
+, <a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa">FOPEN_ERROR</a> = -2
+, <a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9">INPUT_ERROR</a> = -3
  }</td></tr>
 <tr class="memdesc:ab19a8e0fe3ea0ea5c7259400cb389056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for error codes.  <a href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">More...</a><br /></td></tr>
 <tr class="separator:ab19a8e0fe3ea0ea5c7259400cb389056"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +162,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a84391bbe7626605eb3ed51f42542a0e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a84391bbe7626605eb3ed51f42542a0e6">cmpCore</a> (<a class="el" href="structline.html">line</a> line1, <a class="el" href="structline.html">line</a> line2, int delta)</td></tr>
 <tr class="memdesc:a84391bbe7626605eb3ed51f42542a0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core of comparison of 2 strings with direction of ptr movement.  <a href="protos_8h.html#a84391bbe7626605eb3ed51f42542a0e6">More...</a><br /></td></tr>
 <tr class="separator:a84391bbe7626605eb3ed51f42542a0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa530619aa1fa889500ebdaaa7bef054f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#aa530619aa1fa889500ebdaaa7bef054f">fput_line</a> (<a class="el" href="structline.html">line</a> src, FILE *outfile)</td></tr>
-<tr class="separator:aa530619aa1fa889500ebdaaa7bef054f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7064d4ad3486b2eeeee94807091bad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#af7064d4ad3486b2eeeee94807091bad1">fputLine</a> (<a class="el" href="structline.html">line</a> src, FILE *outfile)</td></tr>
+<tr class="separator:af7064d4ad3486b2eeeee94807091bad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fa557fce910daa1163100098899ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a05fa557fce910daa1163100098899ae7">puzirek</a> (void *, size_t, size_t, int(*)(const void *, const void *))</td></tr>
+<tr class="memdesc:a05fa557fce910daa1163100098899ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts.  <a href="protos_8h.html#a05fa557fce910daa1163100098899ae7">More...</a><br /></td></tr>
+<tr class="separator:a05fa557fce910daa1163100098899ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a31ca5aca24614aec217357a437432d87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a31ca5aca24614aec217357a437432d87">errCode</a></td></tr>
+<tr class="memdesc:a31ca5aca24614aec217357a437432d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Var to store error codes from functions.  <a href="protos_8h.html#a31ca5aca24614aec217357a437432d87">More...</a><br /></td></tr>
+<tr class="separator:a31ca5aca24614aec217357a437432d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a18b5ed1de200502d90a1d48be7842ca1"></a>
@@ -209,7 +222,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00018">18</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00022">22</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
 
 </div>
 </div>
@@ -229,6 +242,12 @@ Functions</h2></td></tr>
 <p>Enum for error codes. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59"></a>OK&#160;</td><td class="fielddoc"><p>everything ok </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984"></a>BAD_ALLOC&#160;</td><td class="fielddoc"><p>Allocation failed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa"></a>FOPEN_ERROR&#160;</td><td class="fielddoc"><p>Error opening file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9"></a>INPUT_ERROR&#160;</td><td class="fielddoc"><p>Error in input function. </p>
 </td></tr>
 </table>
 
@@ -313,18 +332,18 @@ Functions</h2></td></tr>
 <dd>
 1 if line1 &gt; line2 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00063">63</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00064">64</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa530619aa1fa889500ebdaaa7bef054f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa530619aa1fa889500ebdaaa7bef054f">&#9670;&nbsp;</a></span>fput_line()</h2>
+<a id="af7064d4ad3486b2eeeee94807091bad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7064d4ad3486b2eeeee94807091bad1">&#9670;&nbsp;</a></span>fputLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fput_line </td>
+          <td class="memname">void fputLine </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structline.html">line</a>&#160;</td>
           <td class="paramname"><em>src</em>, </td>
@@ -343,7 +362,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fput__line_8cpp_source.html#l00003">3</a> of file <a class="el" href="fput__line_8cpp_source.html">fput_line.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fput_line_8cpp_source.html#l00003">3</a> of file <a class="el" href="fput_line_8cpp_source.html">fputLine.cpp</a>.</p>
 
 </div>
 </div>
@@ -607,6 +626,59 @@ false if not cool </dd></dl>
 
 </div>
 </div>
+<a id="a05fa557fce910daa1163100098899ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05fa557fce910daa1163100098899ae7">&#9670;&nbsp;</a></span>puzirek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void puzirek </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>elemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(const void *, const void *)&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sorts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>void* to start of array </td></tr>
+    <tr><td class="paramname">len</td><td>length in elements </td></tr>
+    <tr><td class="paramname">elemSize</td><td>length of one elem in bytes </td></tr>
+    <tr><td class="paramname">comp</td><td>func to compare em all </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="my__sort_8cpp_source.html#l00011">11</a> of file <a class="el" href="my__sort_8cpp_source.html">my_sort.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab285374b18fe616378d88faa5eccf546"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab285374b18fe616378d88faa5eccf546">&#9670;&nbsp;</a></span>read_text()</h2>
 
@@ -634,6 +706,33 @@ false if not cool </dd></dl>
 <p>Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </p>
 
 <p class="definition">Definition at line <a class="el" href="read__text_8cpp_source.html#l00014">14</a> of file <a class="el" href="read__text_8cpp_source.html">read_text.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a31ca5aca24614aec217357a437432d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ca5aca24614aec217357a437432d87">&#9670;&nbsp;</a></span>errCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="protos_8h.html#ab19a8e0fe3ea0ea5c7259400cb389056">errorCode</a> errCode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Var to store error codes from functions. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00001">1</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

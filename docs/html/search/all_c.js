@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['stringcnt_29',['stringCnt',['../structtext.html#ac9b610f2d15da2a601e4dc20d252270a',1,'text']]]
+  ['read_5ftext_34',['read_text',['../protos_8h.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp'],['../read__text_8cpp.html#ab285374b18fe616378d88faa5eccf546',1,'read_text(const char *filename):&#160;read_text.cpp']]],
+  ['read_5ftext_2ecpp_35',['read_text.cpp',['../read__text_8cpp.html',1,'']]]
 ];

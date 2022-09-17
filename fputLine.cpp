@@ -1,6 +1,6 @@
 #include "protos.h"
 
-void fput_line (line src, FILE* outfile) {
+void fputLine (line src, FILE* outfile) {
 
     char temp = *src.end;
     *src.end = '\0';

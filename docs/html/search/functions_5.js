@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['killline_50',['killLine',['../initializers__and__destructors_8cpp.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a89e5f11c20a0fe41e1fcee4c8fe3bcfd',1,'killLine(line *target):&#160;initializers_and_destructors.cpp']]],
-  ['killtext_51',['killText',['../initializers__and__destructors_8cpp.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a5cd4fdc44f5aab88c2b2f6072dd05ae9',1,'killText(text *target):&#160;initializers_and_destructors.cpp']]]
+  ['initline_57',['initLine',['../initializers__and__destructors_8cpp.html#ab48cdaf07893d47c1ec98368a022dfd8',1,'initLine(line *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#ab48cdaf07893d47c1ec98368a022dfd8',1,'initLine(line *target):&#160;initializers_and_destructors.cpp']]],
+  ['inittext_58',['initText',['../initializers__and__destructors_8cpp.html#a3cc9f6add828df4782ed77208dd37977',1,'initText(text *target):&#160;initializers_and_destructors.cpp'],['../protos_8h.html#a3cc9f6add828df4782ed77208dd37977',1,'initText(text *target):&#160;initializers_and_destructors.cpp']]],
+  ['isalphanum_59',['isAlphaNum',['../comps_8cpp.html#aea547ef49920c0686a41a0144bed2854',1,'isAlphaNum(const char c):&#160;comps.cpp'],['../protos_8h.html#aea547ef49920c0686a41a0144bed2854',1,'isAlphaNum(const char c):&#160;comps.cpp']]]
 ];

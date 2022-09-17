@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_my__sort_8cpp" xml:lang="en-US">
+<title>my_sort.cpp File Reference</title>
+<indexterm><primary>my_sort.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585">puzirek</link> (void *begin, size_t len, size_t elemSize, int(*comp)(const void *, const void *))</para>
+
+<para>Sorts. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585"/>    <section>
+    <title>puzirek()</title>
+<indexterm><primary>puzirek</primary><secondary>my_sort.cpp</secondary></indexterm>
+<indexterm><primary>my_sort.cpp</primary><secondary>puzirek</secondary></indexterm>
+<para><computeroutput>void puzirek (void * begin, size_t len, size_t elemSize, int(*)(const void *, const void *) comp)</computeroutput></para><para>
+
+<para>Sorts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>begin</entry>
+                                <entry>
+<para>void* to start of array </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>len</entry>
+                                <entry>
+<para>length in elements </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>elemSize</entry>
+                                <entry>
+<para>length of one elem in bytes </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>comp</entry>
+                                <entry>
+<para>func to compare em all </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11 of file my_sort.cpp.</para>
+</section>
+</section>
+</section>

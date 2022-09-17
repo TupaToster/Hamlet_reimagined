@@ -19,11 +19,14 @@
     <member refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kind="function"><name>lineCmpArab</name></member>
     <member refid="comps_8cpp_1a84391bbe7626605eb3ed51f42542a0e6" kind="function"><name>cmpCore</name></member>
   </compound>
-  <compound refid="fput__line_8cpp" kind="file"><name>fput_line.cpp</name>
-    <member refid="fput__line_8cpp_1aa530619aa1fa889500ebdaaa7bef054f" kind="function"><name>fput_line</name></member>
+  <compound refid="fput_line_8cpp" kind="file"><name>fputLine.cpp</name>
+    <member refid="fput_line_8cpp_1af7064d4ad3486b2eeeee94807091bad1" kind="function"><name>fputLine</name></member>
   </compound>
   <compound refid="get__size_8cpp" kind="file"><name>get_size.cpp</name>
     <member refid="get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kind="function"><name>get_size</name></member>
+  </compound>
+  <compound refid="handle_com_line_8cpp" kind="file"><name>handleComLine.cpp</name>
+    <member refid="handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a" kind="function"><name>handleComLine</name></member>
   </compound>
   <compound refid="initializers__and__destructors_8cpp" kind="file"><name>initializers_and_destructors.cpp</name>
     <member refid="initializers__and__destructors_8cpp_1ab48cdaf07893d47c1ec98368a022dfd8" kind="function"><name>initLine</name></member>
@@ -35,10 +38,17 @@
     <member refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kind="variable"><name>errCode</name></member>
     <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="my__sort_8cpp" kind="file"><name>my_sort.cpp</name>
+    <member refid="my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585" kind="function"><name>puzirek</name></member>
+  </compound>
   <compound refid="protos_8h" kind="file"><name>protos.h</name>
     <member refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kind="define"><name>check</name></member>
     <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056" kind="enum"><name>errorCode</name></member>
     <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
+    <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kind="enumvalue"><name>BAD_ALLOC</name></member>
+    <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa" kind="enumvalue"><name>FOPEN_ERROR</name></member>
+    <member refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9" kind="enumvalue"><name>INPUT_ERROR</name></member>
+    <member refid="protos_8h_1a31ca5aca24614aec217357a437432d87" kind="variable"><name>errCode</name></member>
     <member refid="protos_8h_1a3cc9f6add828df4782ed77208dd37977" kind="function"><name>initText</name></member>
     <member refid="protos_8h_1ab48cdaf07893d47c1ec98368a022dfd8" kind="function"><name>initLine</name></member>
     <member refid="protos_8h_1a5cd4fdc44f5aab88c2b2f6072dd05ae9" kind="function"><name>killText</name></member>
@@ -50,7 +60,8 @@
     <member refid="protos_8h_1a4f2ba23eb402c4479ab5d36e0c39c80b" kind="function"><name>lineCmp</name></member>
     <member refid="protos_8h_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kind="function"><name>lineCmpArab</name></member>
     <member refid="protos_8h_1a84391bbe7626605eb3ed51f42542a0e6" kind="function"><name>cmpCore</name></member>
-    <member refid="protos_8h_1aa530619aa1fa889500ebdaaa7bef054f" kind="function"><name>fput_line</name></member>
+    <member refid="protos_8h_1af7064d4ad3486b2eeeee94807091bad1" kind="function"><name>fputLine</name></member>
+    <member refid="protos_8h_1a05fa557fce910daa1163100098899ae7" kind="function"><name>puzirek</name></member>
   </compound>
   <compound refid="read__text_8cpp" kind="file"><name>read_text.cpp</name>
     <member refid="read__text_8cpp_1ab285374b18fe616378d88faa5eccf546" kind="function"><name>read_text</name></member>

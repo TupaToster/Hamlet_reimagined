@@ -21,6 +21,9 @@ struct \mbox{\hyperlink{structtext}{text}}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}} \{ \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}} = 0
+, \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984}{BAD\+\_\+\+ALLOC}} = -\/1
+, \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa}{FOPEN\+\_\+\+ERROR}} = -\/2
+, \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9}{INPUT\+\_\+\+ERROR}} = -\/3
  \}
 \begin{DoxyCompactList}\small\item\em Enum for error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -48,8 +51,15 @@ int \mbox{\hyperlink{protos_8h_ae4bf5b1ee57024f7acd7cb71a92d5f9b}{line\+Cmp\+Ara
 \begin{DoxyCompactList}\small\item\em compares strings left to right \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}{cmp\+Core}} (\mbox{\hyperlink{structline}{line}} line1, \mbox{\hyperlink{structline}{line}} line2, int delta)
 \begin{DoxyCompactList}\small\item\em Core of comparison of 2 strings with direction of ptr movement. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}{fput\+\_\+line}} (\mbox{\hyperlink{structline}{line}} src, FILE $\ast$outfile)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{protos_8h_af7064d4ad3486b2eeeee94807091bad1}{fput\+Line}} (\mbox{\hyperlink{structline}{line}} src, FILE $\ast$outfile)
+\item 
+void \mbox{\hyperlink{protos_8h_a05fa557fce910daa1163100098899ae7}{puzirek}} (void $\ast$, size\+\_\+t, size\+\_\+t, int($\ast$)(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Sorts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}} \mbox{\hyperlink{protos_8h_a31ca5aca24614aec217357a437432d87}{err\+Code}}
+\begin{DoxyCompactList}\small\item\em Var to store error codes from functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -83,7 +93,7 @@ Checks for condition and if true returns ret\+Val and writes err\+Type to err\+C
 \end{DoxyParams}
 
 
-Definition at line 18 of file protos.\+h.
+Definition at line 22 of file protos.\+h.
 
 
 
@@ -101,6 +111,18 @@ Enum for error codes.
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!protos.h@{protos.h}}\index{protos.h@{protos.h}!OK@{OK}}}\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59}} 
 OK&everything ok \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_ALLOC@{BAD\_ALLOC}!protos.h@{protos.h}}\index{protos.h@{protos.h}!BAD\_ALLOC@{BAD\_ALLOC}}}\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984}} 
+BAD\+\_\+\+ALLOC&Allocation failed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOPEN\_ERROR@{FOPEN\_ERROR}!protos.h@{protos.h}}\index{protos.h@{protos.h}!FOPEN\_ERROR@{FOPEN\_ERROR}}}\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa}} 
+FOPEN\+\_\+\+ERROR&Error opening file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INPUT\_ERROR@{INPUT\_ERROR}!protos.h@{protos.h}}\index{protos.h@{protos.h}!INPUT\_ERROR@{INPUT\_ERROR}}}\mbox{\Hypertarget{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9}\label{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9}} 
+INPUT\+\_\+\+ERROR&Error in input function. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -161,17 +183,17 @@ Core of comparison of 2 strings with direction of ptr movement.
 \end{DoxyReturn}
 
 
-Definition at line 63 of file comps.\+cpp.
+Definition at line 64 of file comps.\+cpp.
 
-\mbox{\Hypertarget{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}\label{protos_8h_aa530619aa1fa889500ebdaaa7bef054f}} 
-\index{protos.h@{protos.h}!fput\_line@{fput\_line}}
-\index{fput\_line@{fput\_line}!protos.h@{protos.h}}
-\doxysubsubsection{\texorpdfstring{fput\_line()}{fput\_line()}}
-{\footnotesize\ttfamily void fput\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{src,  }\item[{FILE $\ast$}]{outfile }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{protos_8h_af7064d4ad3486b2eeeee94807091bad1}\label{protos_8h_af7064d4ad3486b2eeeee94807091bad1}} 
+\index{protos.h@{protos.h}!fputLine@{fputLine}}
+\index{fputLine@{fputLine}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{fputLine()}{fputLine()}}
+{\footnotesize\ttfamily void fput\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{src,  }\item[{FILE $\ast$}]{outfile }\end{DoxyParamCaption})}
 
 
 
-Definition at line 3 of file fput\+\_\+line.\+cpp.
+Definition at line 3 of file fput\+Line.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}\label{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}} 
 \index{protos.h@{protos.h}!get\_size@{get\_size}}
@@ -351,6 +373,31 @@ compares strings left to right
 
 Definition at line 33 of file comps.\+cpp.
 
+\mbox{\Hypertarget{protos_8h_a05fa557fce910daa1163100098899ae7}\label{protos_8h_a05fa557fce910daa1163100098899ae7}} 
+\index{protos.h@{protos.h}!puzirek@{puzirek}}
+\index{puzirek@{puzirek}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{puzirek()}{puzirek()}}
+{\footnotesize\ttfamily void puzirek (\begin{DoxyParamCaption}\item[{void $\ast$}]{begin,  }\item[{size\+\_\+t}]{len,  }\item[{size\+\_\+t}]{elem\+Size,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{comp }\end{DoxyParamCaption})}
+
+
+
+Sorts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & void$\ast$ to start of array \\
+\hline
+{\em len} & length in elements \\
+\hline
+{\em elem\+Size} & length of one elem in bytes \\
+\hline
+{\em comp} & func to compare em all \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file my\+\_\+sort.\+cpp.
+
 \mbox{\Hypertarget{protos_8h_ab285374b18fe616378d88faa5eccf546}\label{protos_8h_ab285374b18fe616378d88faa5eccf546}} 
 \index{protos.h@{protos.h}!read\_text@{read\_text}}
 \index{read\_text@{read\_text}!protos.h@{protos.h}}
@@ -372,4 +419,21 @@ text struct full of stuff
 Fills text struct with\+: text\+String -\/ whole text of a file lines -\/ array of lines of file of type \mbox{[}begin, end) string\+Cnt -\/ amount of strings in file text\+Size -\/ sizeof text (by get\+\_\+size) 
 
 Definition at line 14 of file read\+\_\+text.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{protos_8h_a31ca5aca24614aec217357a437432d87}\label{protos_8h_a31ca5aca24614aec217357a437432d87}} 
+\index{protos.h@{protos.h}!errCode@{errCode}}
+\index{errCode@{errCode}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{errCode}{errCode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_ab19a8e0fe3ea0ea5c7259400cb389056}{error\+Code}} err\+Code\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Var to store error codes from functions. 
+
+
+
+Definition at line 1 of file main.\+cpp.
 

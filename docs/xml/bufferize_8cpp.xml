@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="bufferize.cpp" line="8" column="6" bodyfile="bufferize.cpp" bodystart="8" bodyend="22"/>
+        <location file="bufferize.cpp" line="8" column="6" bodyfile="bufferize.cpp" bodystart="8" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,16 +84,18 @@
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>fSize<sp/>=<sp/><ref refid="get__size_8cpp_1ac87fbefe4ae9195d7ba3a7a38eed3fdb" kindref="member">get_size</ref><sp/>(filename);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(fSize<sp/>+<sp/>2,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>txt++;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fIn<sp/>=<sp/>fopen<sp/>(filename,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>fread<sp/>(txt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>fSize,<sp/>fIn);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(txt<sp/>==<sp/>NULL,<sp/>NULL,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>txt++;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fIn<sp/>=<sp/>fopen<sp/>(filename,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(fIn<sp/>==<sp/>NULL,<sp/>NULL,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa" kindref="member">FOPEN_ERROR</ref>);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>txt[fSize]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(fread<sp/>(txt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>fSize,<sp/>fIn)<sp/>!=<sp/>fSize,<sp/>NULL,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056aec1024879d398de584d1722ebbe0a5c9" kindref="member">INPUT_ERROR</ref>);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>txt;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>txt[fSize]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>txt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="bufferize.cpp"/>
   </compounddef>

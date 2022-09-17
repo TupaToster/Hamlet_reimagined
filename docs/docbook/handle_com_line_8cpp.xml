@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_handle_com_line_8cpp" xml:lang="en-US">
+<title>handleComLine.cpp File Reference</title>
+<indexterm><primary>handleComLine.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a">handleComLine</link> (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut, FILE **output)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a"/>    <section>
+    <title>handleComLine()</title>
+<indexterm><primary>handleComLine</primary><secondary>handleComLine.cpp</secondary></indexterm>
+<indexterm><primary>handleComLine.cpp</primary><secondary>handleComLine</secondary></indexterm>
+<para><computeroutput>void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut, FILE ** output)</computeroutput></para><para>
+Definition at line 3 of file handleComLine.cpp.</para>
+</section>
+</section>
+</section>

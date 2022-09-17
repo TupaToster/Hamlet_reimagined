@@ -17,6 +17,7 @@ text read_text (const char* filename) {
     initText (&retVal);
 
     retVal.textString = bufferize (filename);
+    check (errCode != OK, retVal, errCode);
 
     retVal.textSize = strlen (retVal.textString);
 
@@ -27,6 +28,7 @@ text read_text (const char* filename) {
     retVal.stringCnt++;
 
     retVal.lines = (line*) calloc (retVal.stringCnt + 1, sizeof (line));
+    check (retVal.lines == NULL, retVal, BAD_ALLOC);
 
     size_t line_iter = 0;
 

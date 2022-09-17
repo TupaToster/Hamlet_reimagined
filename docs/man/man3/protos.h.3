@@ -1,4 +1,4 @@
-.TH "protos.h" 3 "Fri Sep 16 2022" "Version 2.28" "Hamlet_reimagined" \" -*- nroff -*-
+.TH "protos.h" 3 "Sat Sep 17 2022" "Version 2.28" "Hamlet_reimagined" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -41,7 +41,7 @@ protos.h
 
 .in +1c
 .ti -1c
-.RI "enum \fBerrorCode\fP { \fBOK\fP = 0 }"
+.RI "enum \fBerrorCode\fP { \fBOK\fP = 0, \fBBAD_ALLOC\fP = -1, \fBFOPEN_ERROR\fP = -2, \fBINPUT_ERROR\fP = -3 }"
 .br
 .RI "Enum for error codes\&. "
 .in -1c
@@ -93,8 +93,20 @@ protos.h
 .br
 .RI "Core of comparison of 2 strings with direction of ptr movement\&. "
 .ti -1c
-.RI "void \fBfput_line\fP (\fBline\fP src, FILE *outfile)"
+.RI "void \fBfputLine\fP (\fBline\fP src, FILE *outfile)"
 .br
+.ti -1c
+.RI "void \fBpuzirek\fP (void *, size_t, size_t, int(*)(const void *, const void *))"
+.br
+.RI "Sorts\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBerrorCode\fP \fBerrCode\fP"
+.br
+.RI "Var to store error codes from functions\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -122,7 +134,7 @@ Checks for condition and if true returns retVal and writes errType to errCode\&.
 .PP
 
 .PP
-Definition at line 18 of file protos\&.h\&.
+Definition at line 22 of file protos\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBerrorCode\fP"
@@ -135,6 +147,15 @@ Enum for error codes\&.
 .TP
 \fB\fIOK \fP\fP
 everything ok 
+.TP
+\fB\fIBAD_ALLOC \fP\fP
+Allocation failed\&. 
+.TP
+\fB\fIFOPEN_ERROR \fP\fP
+Error opening file\&. 
+.TP
+\fB\fIINPUT_ERROR \fP\fP
+Error in input function\&. 
 .PP
 Definition at line 7 of file protos\&.h\&.
 .SH "Function Documentation"
@@ -182,11 +203,11 @@ Core of comparison of 2 strings with direction of ptr movement\&.
 .PP
 
 .PP
-Definition at line 63 of file comps\&.cpp\&.
-.SS "void fput_line (\fBline\fP src, FILE * outfile)"
+Definition at line 64 of file comps\&.cpp\&.
+.SS "void fputLine (\fBline\fP src, FILE * outfile)"
 
 .PP
-Definition at line 3 of file fput_line\&.cpp\&.
+Definition at line 3 of file fputLine\&.cpp\&.
 .SS "size_t get_size (const char * filename)"
 
 .PP
@@ -325,6 +346,25 @@ compares strings left to right
 
 .PP
 Definition at line 33 of file comps\&.cpp\&.
+.SS "void puzirek (void * begin, size_t len, size_t elemSize, int(*)(const void *, const void *) comp)"
+
+.PP
+Sorts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbegin\fP void* to start of array 
+.br
+\fIlen\fP length in elements 
+.br
+\fIelemSize\fP length of one elem in bytes 
+.br
+\fIcomp\fP func to compare em all 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file my_sort\&.cpp\&.
 .SS "\fBtext\fP read_text (const char * filename)"
 
 .PP
@@ -343,6 +383,14 @@ text struct full of stuff
 Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) 
 .PP
 Definition at line 14 of file read_text\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBerrorCode\fP errCode\fC [extern]\fP"
+
+.PP
+Var to store error codes from functions\&. 
+.PP
+Definition at line 1 of file main\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

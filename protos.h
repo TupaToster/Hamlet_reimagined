@@ -3,11 +3,15 @@
 #include <string.h>
 #include <assert.h>
 #include <sys\stat.h>
-//! \brief Enum for error codes
+/// @brief Enum for error codes
 enum errorCode {
-    OK = 0 ///< everything ok
+    OK = 0,          ///< everything ok
+    BAD_ALLOC = -1,   ///< Allocation failed
+    FOPEN_ERROR = -2, ///< Error opening file
+    INPUT_ERROR = -3  ///< Error in input function
 };
 
+extern errorCode errCode;
 
 /*!
     \brief Checks for condition and if true returns retVal and writes errType to errCode
@@ -60,4 +64,6 @@ int lineCmpArab (const void*fst, const void* scd);
 
 int cmpCore (line line1, line line2, int delta);
 
-void fput_line (line src, FILE* outfile);
+void fputLine (line src, FILE* outfile);
+
+void puzirek (void*, size_t, size_t, int (*) (const void*, const void*));
