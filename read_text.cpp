@@ -13,37 +13,21 @@
 */
 text read_text (const char* filename) {
 
+    assert (filename != NULL);
+
     text retVal = {};
     initText (&retVal);
 
-    retVal.textString = bufferize (filename);
-    check (errCode != OK, retVal, errCode);
+    bufferize (filename, &retVal);
+    CHECK (errCode != OK, retVal, errCode);
 
-    retVal.textSize = strlen (retVal.textString);
-
-    for (size_t i = 0; i < retVal.textSize; i++) {
-
-        if (retVal.textString[i] == '\n') retVal.stringCnt++;
-    }
-    retVal.stringCnt++;
+    cntLines (&retVal);
 
     retVal.lines = (line*) calloc (retVal.stringCnt + 1, sizeof (line));
-    check (retVal.lines == NULL, retVal, BAD_ALLOC);
+    CHECK (retVal.lines == NULL, retVal, BAD_ALLOC);
 
-    size_t line_iter = 0;
 
-    for (size_t i = 0; i < retVal.textSize; i++) {
-
-        if (retVal.lines[line_iter].begin == NULL) retVal.lines[line_iter].begin = retVal.textString + i;
-
-        if (retVal.textString[i] == '\n') {
-
-            retVal.lines[line_iter].end = retVal.textString + i + 1;
-            line_iter++;
-        }
-    }
-
-    retVal.lines[line_iter].end = retVal.textString + retVal.textSize;
+    separateLines (&retVal);
 
     return retVal;
 }

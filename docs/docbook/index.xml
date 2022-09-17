@@ -11,6 +11,7 @@
 <chapter>
     <title>File Documentation</title>
     <xi:include href="bufferize_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cnt_lines_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="comps_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="fput_line_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="get__size_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -20,6 +21,7 @@
     <xi:include href="my__sort_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="protos_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="read__text_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="separate_lines_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <index/>
 </book>

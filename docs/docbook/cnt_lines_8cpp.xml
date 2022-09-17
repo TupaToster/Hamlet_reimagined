@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cnt_lines_8cpp" xml:lang="en-US">
+<title>cntLines.cpp File Reference</title>
+<indexterm><primary>cntLines.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_cnt_lines_8cpp_1aca15066a596de9e6615d8ec9c66bdce1">cntLines</link> (<link linkend="_structtext">text</link> *src)</para>
+
+<para>counts amount of lines in a text </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_cnt_lines_8cpp_1aca15066a596de9e6615d8ec9c66bdce1"/>    <section>
+    <title>cntLines()</title>
+<indexterm><primary>cntLines</primary><secondary>cntLines.cpp</secondary></indexterm>
+<indexterm><primary>cntLines.cpp</primary><secondary>cntLines</secondary></indexterm>
+<para><computeroutput>void cntLines (<link linkend="_structtext">text</link> * src)</computeroutput></para><para>
+
+<para>counts amount of lines in a text </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>src</entry>
+                                <entry>
+<para>text* to wite to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 5 of file cntLines.cpp.</para>
+</section>
+</section>
+</section>

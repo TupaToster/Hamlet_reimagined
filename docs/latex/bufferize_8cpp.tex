@@ -4,30 +4,29 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \mbox{\hyperlink{bufferize_8cpp_a4533ca72f4105b135bffc875e44df8b1}{bufferize}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Bufferizes file input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{bufferize_8cpp_aadbba6ad94d0f635fa6d84d3cd2476df}{bufferize}} (const char $\ast$filename, \mbox{\hyperlink{structtext}{text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em Buffirezes file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{bufferize_8cpp_a4533ca72f4105b135bffc875e44df8b1}\label{bufferize_8cpp_a4533ca72f4105b135bffc875e44df8b1}} 
+\mbox{\Hypertarget{bufferize_8cpp_aadbba6ad94d0f635fa6d84d3cd2476df}\label{bufferize_8cpp_aadbba6ad94d0f635fa6d84d3cd2476df}} 
 \index{bufferize.cpp@{bufferize.cpp}!bufferize@{bufferize}}
 \index{bufferize@{bufferize}!bufferize.cpp@{bufferize.cpp}}
 \doxysubsubsection{\texorpdfstring{bufferize()}{bufferize()}}
-{\footnotesize\ttfamily char$\ast$ bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{write\+To }\end{DoxyParamCaption})}
 
 
 
-Bufferizes file input. 
+Buffirezes file. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & name of file to read from \\
+{\em filename} & name of file to bufferize \\
+\hline
+{\em write\+To} & ptr to struct text to write buffer and buffer length to \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-ptr to c-\/string with whole text of file 
-\end{DoxyReturn}
 
 
-Definition at line 8 of file bufferize.\+cpp.
+Definition at line 6 of file bufferize.\+cpp.
 

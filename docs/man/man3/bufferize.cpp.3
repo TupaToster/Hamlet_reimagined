@@ -13,30 +13,27 @@ bufferize.cpp
 
 .in +1c
 .ti -1c
-.RI "char * \fBbufferize\fP (const char *filename)"
+.RI "void \fBbufferize\fP (const char *filename, \fBtext\fP *writeTo)"
 .br
-.RI "Bufferizes file input\&. "
+.RI "Buffirezes file\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "char* bufferize (const char * filename)"
+.SS "void bufferize (const char * filename, \fBtext\fP * writeTo)"
 
 .PP
-Bufferizes file input\&. 
+Buffirezes file\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIfilename\fP name of file to read from 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-ptr to c-string with whole text of file 
+\fIfilename\fP name of file to bufferize 
+.br
+\fIwriteTo\fP ptr to struct text to write buffer and buffer length to 
 .RE
 .PP
 
 .PP
-Definition at line 8 of file bufferize\&.cpp\&.
+Definition at line 6 of file bufferize\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

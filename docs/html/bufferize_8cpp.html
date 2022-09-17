@@ -96,37 +96,47 @@ $(document).ready(function(){initNavTree('bufferize_8cpp.html',''); initResizabl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4533ca72f4105b135bffc875e44df8b1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bufferize_8cpp.html#a4533ca72f4105b135bffc875e44df8b1">bufferize</a> (const char *filename)</td></tr>
-<tr class="memdesc:a4533ca72f4105b135bffc875e44df8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bufferizes file input.  <a href="bufferize_8cpp.html#a4533ca72f4105b135bffc875e44df8b1">More...</a><br /></td></tr>
-<tr class="separator:a4533ca72f4105b135bffc875e44df8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bufferize_8cpp.html#aadbba6ad94d0f635fa6d84d3cd2476df">bufferize</a> (const char *filename, <a class="el" href="structtext.html">text</a> *writeTo)</td></tr>
+<tr class="memdesc:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffirezes file.  <a href="bufferize_8cpp.html#aadbba6ad94d0f635fa6d84d3cd2476df">More...</a><br /></td></tr>
+<tr class="separator:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4533ca72f4105b135bffc875e44df8b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4533ca72f4105b135bffc875e44df8b1">&#9670;&nbsp;</a></span>bufferize()</h2>
+<a id="aadbba6ad94d0f635fa6d84d3cd2476df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbba6ad94d0f635fa6d84d3cd2476df">&#9670;&nbsp;</a></span>bufferize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* bufferize </td>
+          <td class="memname">void bufferize </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structtext.html">text</a> *&#160;</td>
+          <td class="paramname"><em>writeTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Bufferizes file input. </p>
+<p>Buffirezes file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>name of file to read from </td></tr>
+    <tr><td class="paramname">filename</td><td>name of file to bufferize </td></tr>
+    <tr><td class="paramname">writeTo</td><td>ptr to struct text to write buffer and buffer length to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>ptr to c-string with whole text of file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bufferize_8cpp_source.html#l00008">8</a> of file <a class="el" href="bufferize_8cpp_source.html">bufferize.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bufferize_8cpp_source.html#l00006">6</a> of file <a class="el" href="bufferize_8cpp_source.html">bufferize.cpp</a>.</p>
 
 </div>
 </div>

@@ -35,16 +35,51 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ctype.h</label>
       </node>
       <node id="3">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* Mystrdup</definition>
+        <argsstring>(const char *from)</argsstring>
+        <name>Mystrdup</name>
+        <param>
+          <type>const char *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+<para>Duplicates argument and returns ptr to it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to dupe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ptr to allocated mem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="handleComLine.cpp" line="6" column="6" bodyfile="handleComLine.cpp" bodystart="6" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void handleComLine</definition>
-        <argsstring>(int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut, FILE **output)</argsstring>
+        <argsstring>(int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)</argsstring>
         <name>handleComLine</name>
         <param>
           <type>int</type>
@@ -71,17 +106,64 @@
           <type>char **</type>
           <declname>defaultOut</declname>
         </param>
-        <param>
-          <type>FILE **</type>
-          <declname>output</declname>
-        </param>
         <briefdescription>
+<para>Handle variable command line arguments. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of args </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of input file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sortedOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of output straight sort file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arabsortedOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of arabsorted file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of default output file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="handleComLine.cpp" line="3" column="6" bodyfile="handleComLine.cpp" bodystart="3" bodyend="13"/>
+        <location file="handleComLine.cpp" line="27" column="6" bodyfile="handleComLine.cpp" bodystart="27" bodyend="102"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,17 +173,96 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a" kindref="member">handleComLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>argc,<sp/></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[],</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>inName,</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>sortedOut,</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>arabsortedOut,</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>defaultOut,</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE**<sp/>output)</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" refkind="member"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>from)<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(from<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>temp<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(strlen<sp/>(from)<sp/>+<sp/>1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(char));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(temp<sp/>==<sp/>NULL,<sp/>NULL,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy<sp/>(temp,<sp/>from);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[strlen<sp/>(from)]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09" kindref="member">handleComLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>argc,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[],</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>inName,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>sortedOut,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>arabsortedOut,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>defaultOut)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(argv<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(inName<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(sortedOut<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(arabsortedOut<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(defaultOut<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Usage<sp/>of<sp/>program<sp/>:<sp/>Hamlet.exe<sp/>Input_file_name<sp/>Sorted_output_file_name<sp/>Sorted_arabic_output_file_name<sp/>Defaul_output_file_name;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;If<sp/>\&quot;-\&quot;<sp/>is<sp/>inputted<sp/>instead<sp/>of<sp/>output<sp/>file<sp/>name,<sp/>than<sp/>no<sp/>such<sp/>output<sp/>file<sp/>is<sp/>created.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;If<sp/>\&quot;-\&quot;<sp/>is<sp/>inputted<sp/>instead<sp/>of<sp/>input<sp/>file,<sp/>than<sp/>default<sp/>file<sp/>with<sp/>name<sp/>of<sp/>\&quot;Hamlet\&quot;<sp/>is<sp/>opened<sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;If<sp/>number<sp/>of<sp/>arguments<sp/>is<sp/>not<sp/>fout<sp/>or<sp/>zero,<sp/>the<sp/>program<sp/>will<sp/>stop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>(0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>!=<sp/>5)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>arguments&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>(0);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/>5)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(argv[1]<sp/>==<sp/>NULL,<sp/>,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp<sp/>(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*inName<sp/>=<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(</highlight><highlight class="stringliteral">&quot;Hamlet&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*inName<sp/>=<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(argv[1]);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(argv[2]<sp/>==<sp/>NULL,<sp/>,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp<sp/>(argv[2],<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*sortedOut<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*sortedOut<sp/>=<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(argv[2]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(argv[3]<sp/>==<sp/>NULL,<sp/>,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp<sp/>(argv[3],<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*arabsortedOut<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*arabsortedOut<sp/>=<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(argv[3]);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(argv[4]<sp/>==<sp/>NULL,<sp/>,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp<sp/>(argv[4],<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*defaultOut<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*defaultOut<sp/>=<sp/><ref refid="handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f" kindref="member">Mystrdup</ref><sp/>(argv[4]);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a822bae94dea1a65ba1f762abd0a50009" kindref="member">CHECK</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="handleComLine.cpp"/>
   </compounddef>

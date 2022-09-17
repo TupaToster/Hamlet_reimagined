@@ -1,24 +1,22 @@
 #include "protos.h"
 
-/*!
-    \brief Bufferizes file input
-    \param filename name of file to read from
-    \return ptr to c-string with whole text of file
-*/
-char* bufferize (const char* filename) {
+/// @brief Buffirezes file
+/// @param filename name of file to bufferize
+/// @param writeTo ptr to struct text to write buffer and buffer length to
+void bufferize (const char* filename, text* writeTo) {
 
-    size_t fSize = get_size (filename);
+    writeTo->textSize = get_size (filename);
 
-    char* txt = (char*) calloc (fSize + 2, sizeof (char));
-    check (txt == NULL, NULL, BAD_ALLOC);
-    txt++;
+    writeTo->textString = (char*) calloc (writeTo->textSize + 2, sizeof (char));
+    CHECK (writeTo->textString == NULL, , BAD_ALLOC);
+
+    writeTo->textString++;
 
     FILE* fIn = fopen (filename, "r");
-    check (fIn == NULL, NULL, FOPEN_ERROR);
+    CHECK (fIn == NULL, , FOPEN_ERROR);
 
-    check (fread (txt, sizeof (char), fSize, fIn) != fSize, NULL, INPUT_ERROR);
+    CHECK (fread (writeTo->textString, sizeof (char), writeTo->textSize, fIn) != writeTo->textSize, , INPUT_ERROR);
 
-    txt[fSize] = '\0';
+    writeTo->textString[writeTo->textSize] = '\0';
 
-    return txt;
 }

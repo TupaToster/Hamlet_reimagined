@@ -4,18 +4,61 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{handle_com_line_8cpp_afbbca4301b4348ddb0bc51cf9ec9854a}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$$\ast$in\+Name, char $\ast$$\ast$sorted\+Out, char $\ast$$\ast$arabsorted\+Out, char $\ast$$\ast$default\+Out, FILE $\ast$$\ast$output)
-\end{DoxyCompactItemize}
+char $\ast$ \mbox{\hyperlink{handle_com_line_8cpp_aeb9299443081dc0b7ffe6ef3f9e24b6f}{Mystrdup}} (const char $\ast$from)
+\begin{DoxyCompactList}\small\item\em Duplicates argument and returns ptr to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{handle_com_line_8cpp_a9dd48802fd9840fde4045e0211c3da09}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$$\ast$in\+Name, char $\ast$$\ast$sorted\+Out, char $\ast$$\ast$arabsorted\+Out, char $\ast$$\ast$default\+Out)
+\begin{DoxyCompactList}\small\item\em Handle variable command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{handle_com_line_8cpp_afbbca4301b4348ddb0bc51cf9ec9854a}\label{handle_com_line_8cpp_afbbca4301b4348ddb0bc51cf9ec9854a}} 
+\mbox{\Hypertarget{handle_com_line_8cpp_a9dd48802fd9840fde4045e0211c3da09}\label{handle_com_line_8cpp_a9dd48802fd9840fde4045e0211c3da09}} 
 \index{handleComLine.cpp@{handleComLine.cpp}!handleComLine@{handleComLine}}
 \index{handleComLine@{handleComLine}!handleComLine.cpp@{handleComLine.cpp}}
 \doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
-{\footnotesize\ttfamily void handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$$\ast$}]{in\+Name,  }\item[{char $\ast$$\ast$}]{sorted\+Out,  }\item[{char $\ast$$\ast$}]{arabsorted\+Out,  }\item[{char $\ast$$\ast$}]{default\+Out,  }\item[{FILE $\ast$$\ast$}]{output }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$$\ast$}]{in\+Name,  }\item[{char $\ast$$\ast$}]{sorted\+Out,  }\item[{char $\ast$$\ast$}]{arabsorted\+Out,  }\item[{char $\ast$$\ast$}]{default\+Out }\end{DoxyParamCaption})}
 
 
 
-Definition at line 3 of file handle\+Com\+Line.\+cpp.
+Handle variable command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & argument count \\
+\hline
+{\em argv} & array of args \\
+\hline
+{\em in\+Name} & name of input file \\
+\hline
+{\em sorted\+Out} & name of output straight sort file \\
+\hline
+{\em arabsorted\+Out} & name of arabsorted file \\
+\hline
+{\em default\+Out} & name of default output file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file handle\+Com\+Line.\+cpp.
+
+\mbox{\Hypertarget{handle_com_line_8cpp_aeb9299443081dc0b7ffe6ef3f9e24b6f}\label{handle_com_line_8cpp_aeb9299443081dc0b7ffe6ef3f9e24b6f}} 
+\index{handleComLine.cpp@{handleComLine.cpp}!Mystrdup@{Mystrdup}}
+\index{Mystrdup@{Mystrdup}!handleComLine.cpp@{handleComLine.cpp}}
+\doxysubsubsection{\texorpdfstring{Mystrdup()}{Mystrdup()}}
+{\footnotesize\ttfamily char$\ast$ Mystrdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{from }\end{DoxyParamCaption})}
+
+
+
+Duplicates argument and returns ptr to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & string to dupe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr to allocated mem 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file handle\+Com\+Line.\+cpp.
 

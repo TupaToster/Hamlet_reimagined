@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('protos_8h.html',''); initResizable(); 
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;sys\stat.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
 </div>
 <p><a href="protos_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,9 +114,11 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a18b5ed1de200502d90a1d48be7842ca1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">check</a>(cond,  retVal,  errType)</td></tr>
-<tr class="memdesc:a18b5ed1de200502d90a1d48be7842ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for condition and if true returns retVal and writes errType to errCode.  <a href="protos_8h.html#a18b5ed1de200502d90a1d48be7842ca1">More...</a><br /></td></tr>
-<tr class="separator:a18b5ed1de200502d90a1d48be7842ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870111f6c1e1a44c54f91a843c24f298"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a870111f6c1e1a44c54f91a843c24f298">MY_SORT</a></td></tr>
+<tr class="separator:a870111f6c1e1a44c54f91a843c24f298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822bae94dea1a65ba1f762abd0a50009"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a822bae94dea1a65ba1f762abd0a50009">CHECK</a>(cond,  retVal,  errType)</td></tr>
+<tr class="memdesc:a822bae94dea1a65ba1f762abd0a50009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for condition and if true returns retVal and writes errType to errCode.  <a href="protos_8h.html#a822bae94dea1a65ba1f762abd0a50009">More...</a><br /></td></tr>
+<tr class="separator:a822bae94dea1a65ba1f762abd0a50009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -144,9 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac87fbefe4ae9195d7ba3a7a38eed3fdb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb">get_size</a> (const char *filename)</td></tr>
 <tr class="memdesc:ac87fbefe4ae9195d7ba3a7a38eed3fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns size of file in chars.  <a href="protos_8h.html#ac87fbefe4ae9195d7ba3a7a38eed3fdb">More...</a><br /></td></tr>
 <tr class="separator:ac87fbefe4ae9195d7ba3a7a38eed3fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4533ca72f4105b135bffc875e44df8b1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a4533ca72f4105b135bffc875e44df8b1">bufferize</a> (const char *filename)</td></tr>
-<tr class="memdesc:a4533ca72f4105b135bffc875e44df8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bufferizes file input.  <a href="protos_8h.html#a4533ca72f4105b135bffc875e44df8b1">More...</a><br /></td></tr>
-<tr class="separator:a4533ca72f4105b135bffc875e44df8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#aadbba6ad94d0f635fa6d84d3cd2476df">bufferize</a> (const char *filename, <a class="el" href="structtext.html">text</a> *writeTo)</td></tr>
+<tr class="memdesc:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffirezes file.  <a href="protos_8h.html#aadbba6ad94d0f635fa6d84d3cd2476df">More...</a><br /></td></tr>
+<tr class="separator:aadbba6ad94d0f635fa6d84d3cd2476df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab285374b18fe616378d88faa5eccf546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtext.html">text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">read_text</a> (const char *filename)</td></tr>
 <tr class="memdesc:ab285374b18fe616378d88faa5eccf546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills text type var with input from file.  <a href="protos_8h.html#ab285374b18fe616378d88faa5eccf546">More...</a><br /></td></tr>
 <tr class="separator:ab285374b18fe616378d88faa5eccf546"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +170,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a05fa557fce910daa1163100098899ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a05fa557fce910daa1163100098899ae7">puzirek</a> (void *, size_t, size_t, int(*)(const void *, const void *))</td></tr>
 <tr class="memdesc:a05fa557fce910daa1163100098899ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts.  <a href="protos_8h.html#a05fa557fce910daa1163100098899ae7">More...</a><br /></td></tr>
 <tr class="separator:a05fa557fce910daa1163100098899ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd48802fd9840fde4045e0211c3da09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a9dd48802fd9840fde4045e0211c3da09">handleComLine</a> (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)</td></tr>
+<tr class="memdesc:a9dd48802fd9840fde4045e0211c3da09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle variable command line arguments.  <a href="protos_8h.html#a9dd48802fd9840fde4045e0211c3da09">More...</a><br /></td></tr>
+<tr class="separator:a9dd48802fd9840fde4045e0211c3da09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd39f2a4b70e5e584c860d16c687c3ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#acd39f2a4b70e5e584c860d16c687c3ac">cntLines</a> (<a class="el" href="structtext.html">text</a> *writeTo)</td></tr>
+<tr class="memdesc:acd39f2a4b70e5e584c860d16c687c3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">counts amount of lines in a text  <a href="protos_8h.html#acd39f2a4b70e5e584c860d16c687c3ac">More...</a><br /></td></tr>
+<tr class="separator:acd39f2a4b70e5e584c860d16c687c3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659b485ec26275b09ca1299b4a9cecc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protos_8h.html#a659b485ec26275b09ca1299b4a9cecc8">separateLines</a> (<a class="el" href="structtext.html">text</a> *writeTo)</td></tr>
+<tr class="memdesc:a659b485ec26275b09ca1299b4a9cecc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">separates lines in a text  <a href="protos_8h.html#a659b485ec26275b09ca1299b4a9cecc8">More...</a><br /></td></tr>
+<tr class="separator:a659b485ec26275b09ca1299b4a9cecc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -175,14 +187,14 @@ Variables</h2></td></tr>
 <tr class="separator:a31ca5aca24614aec217357a437432d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a18b5ed1de200502d90a1d48be7842ca1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18b5ed1de200502d90a1d48be7842ca1">&#9670;&nbsp;</a></span>check</h2>
+<a id="a822bae94dea1a65ba1f762abd0a50009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822bae94dea1a65ba1f762abd0a50009">&#9670;&nbsp;</a></span>CHECK</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define check</td>
+          <td class="memname">#define CHECK</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">cond, </td>
@@ -222,7 +234,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00022">22</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00025">25</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
+
+</div>
+</div>
+<a id="a870111f6c1e1a44c54f91a843c24f298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870111f6c1e1a44c54f91a843c24f298">&#9670;&nbsp;</a></span>MY_SORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_SORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00007">7</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
 
 </div>
 </div>
@@ -251,37 +279,47 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00007">7</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="protos_8h_source.html#l00010">10</a> of file <a class="el" href="protos_8h_source.html">protos.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4533ca72f4105b135bffc875e44df8b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4533ca72f4105b135bffc875e44df8b1">&#9670;&nbsp;</a></span>bufferize()</h2>
+<a id="aadbba6ad94d0f635fa6d84d3cd2476df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbba6ad94d0f635fa6d84d3cd2476df">&#9670;&nbsp;</a></span>bufferize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* bufferize </td>
+          <td class="memname">void bufferize </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structtext.html">text</a> *&#160;</td>
+          <td class="paramname"><em>writeTo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Bufferizes file input. </p>
+<p>Buffirezes file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>name of file to read from </td></tr>
+    <tr><td class="paramname">filename</td><td>name of file to bufferize </td></tr>
+    <tr><td class="paramname">writeTo</td><td>ptr to struct text to write buffer and buffer length to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>ptr to c-string with whole text of file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bufferize_8cpp_source.html#l00008">8</a> of file <a class="el" href="bufferize_8cpp_source.html">bufferize.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bufferize_8cpp_source.html#l00006">6</a> of file <a class="el" href="bufferize_8cpp_source.html">bufferize.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,6 +371,34 @@ Variables</h2></td></tr>
 1 if line1 &gt; line2 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="comps_8cpp_source.html#l00064">64</a> of file <a class="el" href="comps_8cpp_source.html">comps.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acd39f2a4b70e5e584c860d16c687c3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd39f2a4b70e5e584c860d16c687c3ac">&#9670;&nbsp;</a></span>cntLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cntLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtext.html">text</a> *&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>counts amount of lines in a text </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>text* to wite to and read from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="cnt_lines_8cpp_source.html#l00005">5</a> of file <a class="el" href="cnt_lines_8cpp_source.html">cntLines.cpp</a>.</p>
 
 </div>
 </div>
@@ -392,6 +458,73 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>sizeof file in chars </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="get__size_8cpp_source.html#l00010">10</a> of file <a class="el" href="get__size_8cpp_source.html">get_size.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9dd48802fd9840fde4045e0211c3da09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd48802fd9840fde4045e0211c3da09">&#9670;&nbsp;</a></span>handleComLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleComLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>inName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>sortedOut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>arabsortedOut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>defaultOut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle variable command line arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>argument count </td></tr>
+    <tr><td class="paramname">argv</td><td>array of args </td></tr>
+    <tr><td class="paramname">inName</td><td>name of input file </td></tr>
+    <tr><td class="paramname">sortedOut</td><td>name of output straight sort file </td></tr>
+    <tr><td class="paramname">arabsortedOut</td><td>name of arabsorted file </td></tr>
+    <tr><td class="paramname">defaultOut</td><td>name of default output file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="handle_com_line_8cpp_source.html#l00027">27</a> of file <a class="el" href="handle_com_line_8cpp_source.html">handleComLine.cpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +808,7 @@ false if not cool </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="my__sort_8cpp_source.html#l00011">11</a> of file <a class="el" href="my__sort_8cpp_source.html">my_sort.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="my__sort_8cpp_source.html#l00013">13</a> of file <a class="el" href="my__sort_8cpp_source.html">my_sort.cpp</a>.</p>
 
 </div>
 </div>
@@ -706,6 +839,34 @@ false if not cool </dd></dl>
 <p>Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </p>
 
 <p class="definition">Definition at line <a class="el" href="read__text_8cpp_source.html#l00014">14</a> of file <a class="el" href="read__text_8cpp_source.html">read_text.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a659b485ec26275b09ca1299b4a9cecc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659b485ec26275b09ca1299b4a9cecc8">&#9670;&nbsp;</a></span>separateLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void separateLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtext.html">text</a> *&#160;</td>
+          <td class="paramname"><em>writeTo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>separates lines in a text </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">writeTo</td><td>text* to write to and read from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="separate_lines_8cpp_source.html#l00005">5</a> of file <a class="el" href="separate_lines_8cpp_source.html">separateLines.cpp</a>.</p>
 
 </div>
 </div>

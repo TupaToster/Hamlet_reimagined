@@ -13,67 +13,68 @@ int main (int argc, char* argv[]) {
     char* sortedOut     = NULL;
     char* arabsortedOut = NULL;
     char* defaultOut    = NULL;
-
     FILE* output = NULL;
 
-    if (argc == 5) {
-
-        inName  = (char*) calloc (strlen (argv[1]) + 1, sizeof (char));
-        strcpy (inName, argv[1]);
-
-        sortedOut = (char*) calloc (strlen (argv[2]) + 1, sizeof (char));
-        check (sortedOut == NULL, 0, BAD_ALLOC);
-        strcpy (sortedOut, argv[2]);
-
-        arabsortedOut = (char*) calloc (strlen (argv[3] + 1), sizeof (char));
-        check (arabsortedOut == NULL, 0, BAD_ALLOC);
-        strcpy (arabsortedOut, argv[3]);
-
-        defaultOut = (char*) calloc (strlen (argv[4] + 1), sizeof (char));
-        check (defaultOut == NULL, 0, BAD_ALLOC);
-        strcpy (defaultOut, argv[4]);
-
-        output = fopen (sortedOut, "w");
-        check (output == NULL, 0, FOPEN_ERROR);
-    }
+    handleComLine (argc, argv, &inName, &sortedOut, &arabsortedOut, &defaultOut);
+    assert (errCode == OK);
 
     text hamlet = read_text(inName);
-    check (errCode != OK, 0, errCode);
+    assert (errCode == OK);
 
-    printf ("Sorting straight type...\n");
+    if (sortedOut != NULL) {
 
-    qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
+        output = fopen (sortedOut, "w");
+        assert (output != NULL);
 
-    printf ("Sorted straight type, printing...\n");
+        printf ("Sorting straight type...\n");
 
-    for (size_t i = 0; i < hamlet.stringCnt; i++) {
+        #ifdef MY_SORT
+            puzirek (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
+        #else
+            qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
+        #endif
 
-        fputLine (hamlet.lines[i], output);
-        check (errCode != OK, 0, errCode);
+        printf ("Sorted straight type, printing...\n");
+
+        for (size_t i = 0; i < hamlet.stringCnt; i++) {
+
+            fputLine (hamlet.lines[i], output);
+        }
+
+        printf ("Printed straight type. Procceeding.\n");
     }
 
-    printf ("Printed straight type. Procceeding.\n");
+    if (arabsortedOut != NULL) {
 
-    output = fopen (arabsortedOut, "w");
-    check (output == NULL, 0, FOPEN_ERROR);
+        output = fopen (arabsortedOut, "w");
+        assert (output != NULL);
 
-    printf ("Sorting in arabic...\n");
+        printf ("Sorting in arabic...\n");
 
-    //qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
-    puzirek (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
-    printf ("Sorted in arabic. Printing...\n");
+        #ifdef MY_SORT
+            puzirek (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
+        #else
+            qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
+        #endif
 
-    for (size_t i = 0; i < hamlet.stringCnt; i++) {
+        printf ("Sorted in arabic. Printing...\n");
 
-        fputLine (hamlet.lines[i], output);
+        for (size_t i = 0; i < hamlet.stringCnt; i++) {
+
+            fputLine (hamlet.lines[i], output);
+        }
+
+        printf ("Printed arabic type. \n");
     }
 
-    printf ("Printed arabic type. Printing default...\n");
+    if (defaultOut != NULL) {
 
-    output = fopen (defaultOut, "w");
-    check (output == NULL, 0, FOPEN_ERROR);
+        printf ("Printing default...\n");
+        output = fopen (defaultOut, "w");
+        assert (output != NULL);
 
-    fputs (hamlet.textString, output);
+        fputs (hamlet.textString, output);
 
-    printf ("Printed default");
+        printf ("Printed default");
+    }
 }

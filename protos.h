@@ -3,6 +3,9 @@
 #include <string.h>
 #include <assert.h>
 #include <sys\stat.h>
+#include <ctype.h>
+#define MY_SORT
+
 /// @brief Enum for error codes
 enum errorCode {
     OK = 0,          ///< everything ok
@@ -19,7 +22,7 @@ extern errorCode errCode;
     \param retVal value to return
     \param errType error type to save
 */
-#define check(cond, retVal, errType) \
+#define CHECK(cond, retVal, errType) \
 if (cond) {                          \
                                      \
     errCode = errType;               \
@@ -52,7 +55,7 @@ void killLine (line* target);
 
 size_t get_size (const char* filename);
 
-char* bufferize (const char* filename);
+void bufferize (const char* filename, text* writeTo);
 
 text read_text (const char* filename);
 
@@ -67,3 +70,9 @@ int cmpCore (line line1, line line2, int delta);
 void fputLine (line src, FILE* outfile);
 
 void puzirek (void*, size_t, size_t, int (*) (const void*, const void*));
+
+void handleComLine (int argc, char* argv[], char** inName, char** sortedOut, char** arabsortedOut, char** defaultOut);
+
+void cntLines (text* writeTo);
+
+void separateLines (text* writeTo);

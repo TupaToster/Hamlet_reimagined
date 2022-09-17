@@ -29,6 +29,11 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ctype.h</label>
       </node>
       <node id="3">
         <label>stdio.h</label>
@@ -99,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.cpp" line="10" column="5" bodyfile="main.cpp" bodystart="10" bodyend="79"/>
+        <location file="main.cpp" line="10" column="5" bodyfile="main.cpp" bodystart="10" bodyend="80"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -117,70 +122,71 @@
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>sortedOut<sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>arabsortedOut<sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>defaultOut<sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>output<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/>5)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>output<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09" kindref="member">handleComLine</ref><sp/>(argc,<sp/>argv,<sp/>&amp;inName,<sp/>&amp;sortedOut,<sp/>&amp;arabsortedOut,<sp/>&amp;defaultOut);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>==<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inName<sp/><sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(strlen<sp/>(argv[1])<sp/>+<sp/>1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(char));</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(inName,<sp/>argv[1]);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>hamlet<sp/>=<sp/><ref refid="protos_8h_1ab285374b18fe616378d88faa5eccf546" kindref="member">read_text</ref>(inName);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>==<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sortedOut<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(strlen<sp/>(argv[2])<sp/>+<sp/>1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(char));</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(sortedOut<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(sortedOut,<sp/>argv[2]);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arabsortedOut<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(strlen<sp/>(argv[3]<sp/>+<sp/>1),<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(char));</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(arabsortedOut<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(arabsortedOut,<sp/>argv[3]);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>defaultOut<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(strlen<sp/>(argv[4]<sp/>+<sp/>1),<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(char));</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(defaultOut<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>(defaultOut,<sp/>argv[4]);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(sortedOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(output<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa" kindref="member">FOPEN_ERROR</ref>);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>hamlet<sp/>=<sp/><ref refid="protos_8h_1ab285374b18fe616378d88faa5eccf546" kindref="member">read_text</ref>(inName);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>0,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorting<sp/>straight<sp/>type...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>qsort<sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" kindref="member">lineCmp</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sortedOut<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(sortedOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(output<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorting<sp/>straight<sp/>type...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>MY_SORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585" kindref="member">puzirek</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" kindref="member">lineCmp</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qsort<sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1a4f2ba23eb402c4479ab5d36e0c39c80b" kindref="member">lineCmp</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorted<sp/>straight<sp/>type,<sp/>printing...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fput_line_8cpp_1af7064d4ad3486b2eeeee94807091bad1" kindref="member">fputLine</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i],<sp/>output);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>straight<sp/>type.<sp/>Procceeding.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorted<sp/>straight<sp/>type,<sp/>printing...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arabsortedOut<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fput_line_8cpp_1af7064d4ad3486b2eeeee94807091bad1" kindref="member">fputLine</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i],<sp/>output);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(<ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref><sp/>!=<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>,<sp/>0,<sp/><ref refid="main_8cpp_1a6dab97701c064b3a7184b2fc5160ceea" kindref="member">errCode</ref>);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>straight<sp/>type.<sp/>Procceeding.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(arabsortedOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(output<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa" kindref="member">FOPEN_ERROR</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(arabsortedOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(output<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorting<sp/>in<sp/>arabic...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>MY_SORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585" kindref="member">puzirek</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kindref="member">lineCmpArab</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qsort<sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kindref="member">lineCmpArab</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorting<sp/>in<sp/>arabic...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorted<sp/>in<sp/>arabic.<sp/>Printing...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//qsort<sp/>(hamlet.lines,<sp/>hamlet.stringCnt,<sp/>sizeof<sp/>(line),<sp/>lineCmpArab);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__sort_8cpp_1adcf2fd0b7819099f97e3f10bfa5a7585" kindref="member">puzirek</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/><ref refid="comps_8cpp_1ae4bf5b1ee57024f7acd7cb71a92d5f9b" kindref="member">lineCmpArab</ref>);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Sorted<sp/>in<sp/>arabic.<sp/>Printing...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fput_line_8cpp_1af7064d4ad3486b2eeeee94807091bad1" kindref="member">fputLine</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i],<sp/>output);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>arabic<sp/>type.<sp/>Printing<sp/>default...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(defaultOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a18b5ed1de200502d90a1d48be7842ca1" kindref="member">check</ref><sp/>(output<sp/>==<sp/>NULL,<sp/>0,<sp/><ref refid="protos_8h_1ab19a8e0fe3ea0ea5c7259400cb389056ab7cad684cbb7c5b778a093a01fd8eaaa" kindref="member">FOPEN_ERROR</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>hamlet.<ref refid="structtext_1ac9b610f2d15da2a601e4dc20d252270a" kindref="member">stringCnt</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fput_line_8cpp_1af7064d4ad3486b2eeeee94807091bad1" kindref="member">fputLine</ref><sp/>(hamlet.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i],<sp/>output);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>arabic<sp/>type.<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(defaultOut<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printing<sp/>default...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output<sp/>=<sp/>fopen<sp/>(defaultOut,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(output<sp/>!=<sp/>NULL);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs<sp/>(hamlet.<ref refid="structtext_1acedd0976707f133eb8e729d778da7d37" kindref="member">textString</ref>,<sp/>output);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs<sp/>(hamlet.<ref refid="structtext_1acedd0976707f133eb8e729d778da7d37" kindref="member">textString</ref>,<sp/>output);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>default&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;Printed<sp/>default&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="main.cpp"/>
   </compounddef>

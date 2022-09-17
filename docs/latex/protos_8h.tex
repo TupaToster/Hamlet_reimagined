@@ -5,6 +5,7 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$assert.\+h$>$}\newline
 {\ttfamily \#include $<$sys\textbackslash{}stat.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,7 +16,9 @@ struct \mbox{\hyperlink{structtext}{text}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}{check}}(cond,  ret\+Val,  err\+Type)
+\#define \mbox{\hyperlink{protos_8h_a870111f6c1e1a44c54f91a843c24f298}{MY\+\_\+\+SORT}}
+\item 
+\#define \mbox{\hyperlink{protos_8h_a822bae94dea1a65ba1f762abd0a50009}{CHECK}}(cond,  ret\+Val,  err\+Type)
 \begin{DoxyCompactList}\small\item\em Checks for condition and if true returns ret\+Val and writes err\+Type to err\+Code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -39,8 +42,8 @@ void \mbox{\hyperlink{protos_8h_a89e5f11c20a0fe41e1fcee4c8fe3bcfd}{kill\+Line}} 
 \begin{DoxyCompactList}\small\item\em Deinitializes a line type var. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{protos_8h_ac87fbefe4ae9195d7ba3a7a38eed3fdb}{get\+\_\+size}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Returns size of file in chars. \end{DoxyCompactList}\item 
-char $\ast$ \mbox{\hyperlink{protos_8h_a4533ca72f4105b135bffc875e44df8b1}{bufferize}} (const char $\ast$filename)
-\begin{DoxyCompactList}\small\item\em Bufferizes file input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_aadbba6ad94d0f635fa6d84d3cd2476df}{bufferize}} (const char $\ast$filename, \mbox{\hyperlink{structtext}{text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em Buffirezes file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_ab285374b18fe616378d88faa5eccf546}{read\+\_\+text}} (const char $\ast$filename)
 \begin{DoxyCompactList}\small\item\em Fills text type var with input from file. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{protos_8h_aea547ef49920c0686a41a0144bed2854}{is\+Alpha\+Num}} (const char c)
@@ -54,7 +57,13 @@ int \mbox{\hyperlink{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}{cmp\+Core}} (\
 void \mbox{\hyperlink{protos_8h_af7064d4ad3486b2eeeee94807091bad1}{fput\+Line}} (\mbox{\hyperlink{structline}{line}} src, FILE $\ast$outfile)
 \item 
 void \mbox{\hyperlink{protos_8h_a05fa557fce910daa1163100098899ae7}{puzirek}} (void $\ast$, size\+\_\+t, size\+\_\+t, int($\ast$)(const void $\ast$, const void $\ast$))
-\begin{DoxyCompactList}\small\item\em Sorts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sorts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_a9dd48802fd9840fde4045e0211c3da09}{handle\+Com\+Line}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$$\ast$in\+Name, char $\ast$$\ast$sorted\+Out, char $\ast$$\ast$arabsorted\+Out, char $\ast$$\ast$default\+Out)
+\begin{DoxyCompactList}\small\item\em Handle variable command line arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_acd39f2a4b70e5e584c860d16c687c3ac}{cnt\+Lines}} (\mbox{\hyperlink{structtext}{text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em counts amount of lines in a text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{protos_8h_a659b485ec26275b09ca1299b4a9cecc8}{separate\+Lines}} (\mbox{\hyperlink{structtext}{text}} $\ast$write\+To)
+\begin{DoxyCompactList}\small\item\em separates lines in a text \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,11 +72,11 @@ void \mbox{\hyperlink{protos_8h_a05fa557fce910daa1163100098899ae7}{puzirek}} (vo
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}\label{protos_8h_a18b5ed1de200502d90a1d48be7842ca1}} 
-\index{protos.h@{protos.h}!check@{check}}
-\index{check@{check}!protos.h@{protos.h}}
-\doxysubsubsection{\texorpdfstring{check}{check}}
-{\footnotesize\ttfamily \#define check(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{ret\+Val,  }\item[{}]{err\+Type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{protos_8h_a822bae94dea1a65ba1f762abd0a50009}\label{protos_8h_a822bae94dea1a65ba1f762abd0a50009}} 
+\index{protos.h@{protos.h}!CHECK@{CHECK}}
+\index{CHECK@{CHECK}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{CHECK}{CHECK}}
+{\footnotesize\ttfamily \#define CHECK(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{ret\+Val,  }\item[{}]{err\+Type }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -93,7 +102,17 @@ Checks for condition and if true returns ret\+Val and writes err\+Type to err\+C
 \end{DoxyParams}
 
 
-Definition at line 22 of file protos.\+h.
+Definition at line 25 of file protos.\+h.
+
+\mbox{\Hypertarget{protos_8h_a870111f6c1e1a44c54f91a843c24f298}\label{protos_8h_a870111f6c1e1a44c54f91a843c24f298}} 
+\index{protos.h@{protos.h}!MY\_SORT@{MY\_SORT}}
+\index{MY\_SORT@{MY\_SORT}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{MY\_SORT}{MY\_SORT}}
+{\footnotesize\ttfamily \#define MY\+\_\+\+SORT}
+
+
+
+Definition at line 7 of file protos.\+h.
 
 
 
@@ -128,32 +147,31 @@ INPUT\+\_\+\+ERROR&Error in input function. \\
 \end{DoxyEnumFields}
 
 
-Definition at line 7 of file protos.\+h.
+Definition at line 10 of file protos.\+h.
 
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{protos_8h_a4533ca72f4105b135bffc875e44df8b1}\label{protos_8h_a4533ca72f4105b135bffc875e44df8b1}} 
+\mbox{\Hypertarget{protos_8h_aadbba6ad94d0f635fa6d84d3cd2476df}\label{protos_8h_aadbba6ad94d0f635fa6d84d3cd2476df}} 
 \index{protos.h@{protos.h}!bufferize@{bufferize}}
 \index{bufferize@{bufferize}!protos.h@{protos.h}}
 \doxysubsubsection{\texorpdfstring{bufferize()}{bufferize()}}
-{\footnotesize\ttfamily char$\ast$ bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void bufferize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{write\+To }\end{DoxyParamCaption})}
 
 
 
-Bufferizes file input. 
+Buffirezes file. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & name of file to read from \\
+{\em filename} & name of file to bufferize \\
+\hline
+{\em write\+To} & ptr to struct text to write buffer and buffer length to \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-ptr to c-\/string with whole text of file 
-\end{DoxyReturn}
 
 
-Definition at line 8 of file bufferize.\+cpp.
+Definition at line 6 of file bufferize.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}\label{protos_8h_a84391bbe7626605eb3ed51f42542a0e6}} 
 \index{protos.h@{protos.h}!cmpCore@{cmpCore}}
@@ -184,6 +202,25 @@ Core of comparison of 2 strings with direction of ptr movement.
 
 
 Definition at line 64 of file comps.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_acd39f2a4b70e5e584c860d16c687c3ac}\label{protos_8h_acd39f2a4b70e5e584c860d16c687c3ac}} 
+\index{protos.h@{protos.h}!cntLines@{cntLines}}
+\index{cntLines@{cntLines}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{cntLines()}{cntLines()}}
+{\footnotesize\ttfamily void cnt\+Lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+counts amount of lines in a text 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & text$\ast$ to wite to and read from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file cnt\+Lines.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_af7064d4ad3486b2eeeee94807091bad1}\label{protos_8h_af7064d4ad3486b2eeeee94807091bad1}} 
 \index{protos.h@{protos.h}!fputLine@{fputLine}}
@@ -216,6 +253,35 @@ sizeof file in chars
 
 
 Definition at line 10 of file get\+\_\+size.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a9dd48802fd9840fde4045e0211c3da09}\label{protos_8h_a9dd48802fd9840fde4045e0211c3da09}} 
+\index{protos.h@{protos.h}!handleComLine@{handleComLine}}
+\index{handleComLine@{handleComLine}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{handleComLine()}{handleComLine()}}
+{\footnotesize\ttfamily void handle\+Com\+Line (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{char $\ast$$\ast$}]{in\+Name,  }\item[{char $\ast$$\ast$}]{sorted\+Out,  }\item[{char $\ast$$\ast$}]{arabsorted\+Out,  }\item[{char $\ast$$\ast$}]{default\+Out }\end{DoxyParamCaption})}
+
+
+
+Handle variable command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & argument count \\
+\hline
+{\em argv} & array of args \\
+\hline
+{\em in\+Name} & name of input file \\
+\hline
+{\em sorted\+Out} & name of output straight sort file \\
+\hline
+{\em arabsorted\+Out} & name of arabsorted file \\
+\hline
+{\em default\+Out} & name of default output file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file handle\+Com\+Line.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}\label{protos_8h_ab48cdaf07893d47c1ec98368a022dfd8}} 
 \index{protos.h@{protos.h}!initLine@{initLine}}
@@ -396,7 +462,7 @@ Sorts.
 \end{DoxyParams}
 
 
-Definition at line 11 of file my\+\_\+sort.\+cpp.
+Definition at line 13 of file my\+\_\+sort.\+cpp.
 
 \mbox{\Hypertarget{protos_8h_ab285374b18fe616378d88faa5eccf546}\label{protos_8h_ab285374b18fe616378d88faa5eccf546}} 
 \index{protos.h@{protos.h}!read\_text@{read\_text}}
@@ -419,6 +485,25 @@ text struct full of stuff
 Fills text struct with\+: text\+String -\/ whole text of a file lines -\/ array of lines of file of type \mbox{[}begin, end) string\+Cnt -\/ amount of strings in file text\+Size -\/ sizeof text (by get\+\_\+size) 
 
 Definition at line 14 of file read\+\_\+text.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a659b485ec26275b09ca1299b4a9cecc8}\label{protos_8h_a659b485ec26275b09ca1299b4a9cecc8}} 
+\index{protos.h@{protos.h}!separateLines@{separateLines}}
+\index{separateLines@{separateLines}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{separateLines()}{separateLines()}}
+{\footnotesize\ttfamily void separate\+Lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtext}{text}} $\ast$}]{write\+To }\end{DoxyParamCaption})}
+
+
+
+separates lines in a text 
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\+To} & text$\ast$ to write to and read from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file separate\+Lines.\+cpp.
 
 
 

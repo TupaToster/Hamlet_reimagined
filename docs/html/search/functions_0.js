@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bufferize_52',['bufferize',['../bufferize_8cpp.html#a4533ca72f4105b135bffc875e44df8b1',1,'bufferize(const char *filename):&#160;bufferize.cpp'],['../protos_8h.html#a4533ca72f4105b135bffc875e44df8b1',1,'bufferize(const char *filename):&#160;bufferize.cpp']]]
+  ['bufferize_60',['bufferize',['../bufferize_8cpp.html#aadbba6ad94d0f635fa6d84d3cd2476df',1,'bufferize(const char *filename, text *writeTo):&#160;bufferize.cpp'],['../protos_8h.html#aadbba6ad94d0f635fa6d84d3cd2476df',1,'bufferize(const char *filename, text *writeTo):&#160;bufferize.cpp']]]
 ];

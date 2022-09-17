@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stringcnt_71',['stringCnt',['../structtext.html#ac9b610f2d15da2a601e4dc20d252270a',1,'text']]]
+  ['stringcnt_82',['stringCnt',['../structtext.html#ac9b610f2d15da2a601e4dc20d252270a',1,'text']]]
 ];

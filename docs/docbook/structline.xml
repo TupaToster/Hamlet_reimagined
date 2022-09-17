@@ -28,7 +28,7 @@
 
 <para>Struct to store lines of text in format [begin, end) </para>
 <para>
-Definition at line 30 of file protos.h.</para>
+Definition at line 33 of file protos.h.</para>
 </section>
 <section>
 <title>Member Data Documentation</title>
@@ -41,7 +41,7 @@ Definition at line 30 of file protos.h.</para>
 <para>Ptr to the beginning. </para>
 </para>
 <para>
-Definition at line 32 of file protos.h.</para>
+Definition at line 35 of file protos.h.</para>
     </section><anchor xml:id="_structline_1a5fa2b658adce1c935eee1f54b3d36e68"/>    <section>
     <title>end</title>
 <indexterm><primary>end</primary><secondary>line</secondary></indexterm>
@@ -51,7 +51,7 @@ Definition at line 32 of file protos.h.</para>
 <para>Ptr to the end. </para>
 </para>
 <para>
-Definition at line 33 of file protos.h.</para>
+Definition at line 36 of file protos.h.</para>
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>

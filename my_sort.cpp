@@ -1,3 +1,5 @@
+#pragma GCC diagnostic ignored "-Wpointer-arith"
+
 #include "protos.h"
 
 // я короче в 3:15 тильтую и пишу пузырек по причине я быдло (не понял qsort на строках)
@@ -10,6 +12,9 @@
 /// @param comp func to compare em all
 void puzirek (void* begin, size_t len, size_t elemSize, int (*comp) (const void*, const void*)) {
 
+    assert (begin != NULL);
+    assert (comp != NULL);
+    
     char temp = '\0';
 
     for (size_t indent = 0; indent < len; indent++) {

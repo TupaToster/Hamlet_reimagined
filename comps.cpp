@@ -79,7 +79,7 @@ int cmpCore (line line1, line line2, int delta) {
     else if (line1.begin == line1.end and line2.begin == line2.end) return  0;
 
 
-    if   (*line1.begin < *line2.begin) return -1;
+    if   (tolower (*line1.begin) < tolower(*line2.begin)) return -1;
 
     return 1;
 }

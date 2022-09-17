@@ -7,6 +7,7 @@
 #include &lt;string.h&gt;
 #include &lt;assert.h&gt;
 #include &lt;sys\stat.h&gt;
+#include &lt;ctype.h&gt;
 </programlisting><simplesect>
     <title>Classes    </title>
         <itemizedlist>
@@ -23,7 +24,9 @@
 <simplesect>
     <title>Macros    </title>
         <itemizedlist>
-            <listitem><para>#define <link linkend="_protos_8h_1a18b5ed1de200502d90a1d48be7842ca1">check</link>(cond,  retVal,  errType)</para>
+            <listitem><para>#define <link linkend="_protos_8h_1a870111f6c1e1a44c54f91a843c24f298">MY_SORT</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_protos_8h_1a822bae94dea1a65ba1f762abd0a50009">CHECK</link>(cond,  retVal,  errType)</para>
 
 <para>Checks for condition and if true returns retVal and writes errType to errCode. </para>
 </listitem>
@@ -65,9 +68,9 @@
 
 <para>Returns size of file in chars. </para>
 </listitem>
-            <listitem><para>char * <link linkend="_protos_8h_1a4533ca72f4105b135bffc875e44df8b1">bufferize</link> (const char *filename)</para>
+            <listitem><para>void <link linkend="_protos_8h_1aadbba6ad94d0f635fa6d84d3cd2476df">bufferize</link> (const char *filename, <link linkend="_structtext">text</link> *writeTo)</para>
 
-<para>Bufferizes file input. </para>
+<para>Buffirezes file. </para>
 </listitem>
             <listitem><para><link linkend="_structtext">text</link> <link linkend="_protos_8h_1ab285374b18fe616378d88faa5eccf546">read_text</link> (const char *filename)</para>
 
@@ -95,6 +98,18 @@
 
 <para>Sorts. </para>
 </listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a9dd48802fd9840fde4045e0211c3da09">handleComLine</link> (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)</para>
+
+<para>Handle variable command line arguments. </para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1acd39f2a4b70e5e584c860d16c687c3ac">cntLines</link> (<link linkend="_structtext">text</link> *writeTo)</para>
+
+<para>counts amount of lines in a text </para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a659b485ec26275b09ca1299b4a9cecc8">separateLines</link> (<link linkend="_structtext">text</link> *writeTo)</para>
+
+<para>separates lines in a text </para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
@@ -108,11 +123,11 @@
 </simplesect>
 <section>
 <title>Macro Definition Documentation</title>
-<anchor xml:id="_protos_8h_1a18b5ed1de200502d90a1d48be7842ca1"/>    <section>
-    <title>check</title>
-<indexterm><primary>check</primary><secondary>protos.h</secondary></indexterm>
-<indexterm><primary>protos.h</primary><secondary>check</secondary></indexterm>
-<para><computeroutput>#define check( cond,  retVal,  errType)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting><emphasis role="keywordflow">if</emphasis>&#32;(cond)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+<anchor xml:id="_protos_8h_1a822bae94dea1a65ba1f762abd0a50009"/>    <section>
+    <title>CHECK</title>
+<indexterm><primary>CHECK</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>CHECK</secondary></indexterm>
+<para><computeroutput>#define CHECK( cond,  retVal,  errType)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting><emphasis role="keywordflow">if</emphasis>&#32;(cond)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;errCode&#32;=&#32;errType;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
 &#32;&#32;&#32;&#32;return&#32;retVal;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
@@ -157,7 +172,13 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 22 of file protos.h.</para>
+Definition at line 25 of file protos.h.</para>
+    </section><anchor xml:id="_protos_8h_1a870111f6c1e1a44c54f91a843c24f298"/>    <section>
+    <title>MY_SORT</title>
+<indexterm><primary>MY_SORT</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>MY_SORT</secondary></indexterm>
+<para><computeroutput>#define MY_SORT</computeroutput></para><para>
+Definition at line 7 of file protos.h.</para>
 </section>
 </section>
 <section>
@@ -196,18 +217,18 @@ Definition at line 22 of file protos.h.</para>
     </tgroup>
 </informaltable>
 <para>
-Definition at line 7 of file protos.h.</para>
+Definition at line 10 of file protos.h.</para>
 </section>
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_protos_8h_1a4533ca72f4105b135bffc875e44df8b1"/>    <section>
+<anchor xml:id="_protos_8h_1aadbba6ad94d0f635fa6d84d3cd2476df"/>    <section>
     <title>bufferize()</title>
 <indexterm><primary>bufferize</primary><secondary>protos.h</secondary></indexterm>
 <indexterm><primary>protos.h</primary><secondary>bufferize</secondary></indexterm>
-<para><computeroutput>char* bufferize (const char * filename)</computeroutput></para><para>
+<para><computeroutput>void bufferize (const char * filename, <link linkend="_structtext">text</link> * writeTo)</computeroutput></para><para>
 
-<para>Bufferizes file input. </para>
+<para>Buffirezes file. </para>
 </para>
 
 <para>
@@ -223,7 +244,13 @@ Parameters                    </title>
                             <row>
                                 <entry>filename</entry>
                                 <entry>
-<para>name of file to read from </para>
+<para>name of file to bufferize </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>writeTo</entry>
+                                <entry>
+<para>ptr to struct text to write buffer and buffer length to </para>
 </entry>
                             </row>
                         </tbody>
@@ -231,13 +258,9 @@ Parameters                    </title>
                     </table>
                     </para>
                 </formalpara>
-                <formalpara><title>Returns</title>
-
-<para>ptr to c-string with whole text of file </para>
-</formalpara>
-</para>
+                </para>
 <para>
-Definition at line 8 of file bufferize.cpp.</para>
+Definition at line 6 of file bufferize.cpp.</para>
     </section><anchor xml:id="_protos_8h_1a84391bbe7626605eb3ed51f42542a0e6"/>    <section>
     <title>cmpCore()</title>
 <indexterm><primary>cmpCore</primary><secondary>protos.h</secondary></indexterm>
@@ -291,6 +314,39 @@ Parameters                    </title>
 </para>
 <para>
 Definition at line 64 of file comps.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1acd39f2a4b70e5e584c860d16c687c3ac"/>    <section>
+    <title>cntLines()</title>
+<indexterm><primary>cntLines</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>cntLines</secondary></indexterm>
+<para><computeroutput>void cntLines (<link linkend="_structtext">text</link> * src)</computeroutput></para><para>
+
+<para>counts amount of lines in a text </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>src</entry>
+                                <entry>
+<para>text* to wite to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 5 of file cntLines.cpp.</para>
     </section><anchor xml:id="_protos_8h_1af7064d4ad3486b2eeeee94807091bad1"/>    <section>
     <title>fputLine()</title>
 <indexterm><primary>fputLine</primary><secondary>protos.h</secondary></indexterm>
@@ -334,6 +390,69 @@ Parameters                    </title>
 </para>
 <para>
 Definition at line 10 of file get_size.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a9dd48802fd9840fde4045e0211c3da09"/>    <section>
+    <title>handleComLine()</title>
+<indexterm><primary>handleComLine</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>handleComLine</secondary></indexterm>
+<para><computeroutput>void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut)</computeroutput></para><para>
+
+<para>Handle variable command line arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>argc</entry>
+                                <entry>
+<para>argument count </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>argv</entry>
+                                <entry>
+<para>array of args </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>inName</entry>
+                                <entry>
+<para>name of input file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sortedOut</entry>
+                                <entry>
+<para>name of output straight sort file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>arabsortedOut</entry>
+                                <entry>
+<para>name of arabsorted file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>defaultOut</entry>
+                                <entry>
+<para>name of default output file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 27 of file handleComLine.cpp.</para>
     </section><anchor xml:id="_protos_8h_1ab48cdaf07893d47c1ec98368a022dfd8"/>    <section>
     <title>initLine()</title>
 <indexterm><primary>initLine</primary><secondary>protos.h</secondary></indexterm>
@@ -649,7 +768,7 @@ Parameters                    </title>
                 </formalpara>
                 </para>
 <para>
-Definition at line 11 of file my_sort.cpp.</para>
+Definition at line 13 of file my_sort.cpp.</para>
     </section><anchor xml:id="_protos_8h_1ab285374b18fe616378d88faa5eccf546"/>    <section>
     <title>read_text()</title>
 <indexterm><primary>read_text</primary><secondary>protos.h</secondary></indexterm>
@@ -687,6 +806,39 @@ Parameters                    </title>
 Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) </para>
 <para>
 Definition at line 14 of file read_text.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a659b485ec26275b09ca1299b4a9cecc8"/>    <section>
+    <title>separateLines()</title>
+<indexterm><primary>separateLines</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>separateLines</secondary></indexterm>
+<para><computeroutput>void separateLines (<link linkend="_structtext">text</link> * writeTo)</computeroutput></para><para>
+
+<para>separates lines in a text </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>writeTo</entry>
+                                <entry>
+<para>text* to write to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 5 of file separateLines.cpp.</para>
 </section>
 </section>
 <section>

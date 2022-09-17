@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_separate_lines_8cpp" xml:lang="en-US">
+<title>separateLines.cpp File Reference</title>
+<indexterm><primary>separateLines.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_separate_lines_8cpp_1a659b485ec26275b09ca1299b4a9cecc8">separateLines</link> (<link linkend="_structtext">text</link> *writeTo)</para>
+
+<para>separates lines in a text </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_separate_lines_8cpp_1a659b485ec26275b09ca1299b4a9cecc8"/>    <section>
+    <title>separateLines()</title>
+<indexterm><primary>separateLines</primary><secondary>separateLines.cpp</secondary></indexterm>
+<indexterm><primary>separateLines.cpp</primary><secondary>separateLines</secondary></indexterm>
+<para><computeroutput>void separateLines (<link linkend="_structtext">text</link> * writeTo)</computeroutput></para><para>
+
+<para>separates lines in a text </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>writeTo</entry>
+                                <entry>
+<para>text* to write to and read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 5 of file separateLines.cpp.</para>
+</section>
+</section>
+</section>

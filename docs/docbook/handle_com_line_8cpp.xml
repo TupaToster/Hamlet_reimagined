@@ -6,18 +6,118 @@
 </programlisting><simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a">handleComLine</link> (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut, FILE **output)</para>
+            <listitem><para>char * <link linkend="_handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f">Mystrdup</link> (const char *from)</para>
+
+<para>Duplicates argument and returns ptr to it. </para>
+</listitem>
+            <listitem><para>void <link linkend="_handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09">handleComLine</link> (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)</para>
+
+<para>Handle variable command line arguments. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_handle_com_line_8cpp_1afbbca4301b4348ddb0bc51cf9ec9854a"/>    <section>
+<anchor xml:id="_handle_com_line_8cpp_1a9dd48802fd9840fde4045e0211c3da09"/>    <section>
     <title>handleComLine()</title>
 <indexterm><primary>handleComLine</primary><secondary>handleComLine.cpp</secondary></indexterm>
 <indexterm><primary>handleComLine.cpp</primary><secondary>handleComLine</secondary></indexterm>
-<para><computeroutput>void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut, FILE ** output)</computeroutput></para><para>
-Definition at line 3 of file handleComLine.cpp.</para>
+<para><computeroutput>void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut)</computeroutput></para><para>
+
+<para>Handle variable command line arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>argc</entry>
+                                <entry>
+<para>argument count </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>argv</entry>
+                                <entry>
+<para>array of args </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>inName</entry>
+                                <entry>
+<para>name of input file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sortedOut</entry>
+                                <entry>
+<para>name of output straight sort file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>arabsortedOut</entry>
+                                <entry>
+<para>name of arabsorted file </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>defaultOut</entry>
+                                <entry>
+<para>name of default output file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 27 of file handleComLine.cpp.</para>
+    </section><anchor xml:id="_handle_com_line_8cpp_1aeb9299443081dc0b7ffe6ef3f9e24b6f"/>    <section>
+    <title>Mystrdup()</title>
+<indexterm><primary>Mystrdup</primary><secondary>handleComLine.cpp</secondary></indexterm>
+<indexterm><primary>handleComLine.cpp</primary><secondary>Mystrdup</secondary></indexterm>
+<para><computeroutput>char* Mystrdup (const char * from)</computeroutput></para><para>
+
+<para>Duplicates argument and returns ptr to it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>from</entry>
+                                <entry>
+<para>string to dupe </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ptr to allocated mem </para>
+</formalpara>
+</para>
+<para>
+Definition at line 6 of file handleComLine.cpp.</para>
 </section>
 </section>
 </section>

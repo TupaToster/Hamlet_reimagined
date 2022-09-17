@@ -13,15 +13,57 @@ handleComLine.cpp
 
 .in +1c
 .ti -1c
-.RI "void \fBhandleComLine\fP (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut, FILE **output)"
+.RI "char * \fBMystrdup\fP (const char *from)"
 .br
+.RI "Duplicates argument and returns ptr to it\&. "
+.ti -1c
+.RI "void \fBhandleComLine\fP (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)"
+.br
+.RI "Handle variable command line arguments\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut, FILE ** output)"
+.SS "void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut)"
 
 .PP
-Definition at line 3 of file handleComLine\&.cpp\&.
+Handle variable command line arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP argument count 
+.br
+\fIargv\fP array of args 
+.br
+\fIinName\fP name of input file 
+.br
+\fIsortedOut\fP name of output straight sort file 
+.br
+\fIarabsortedOut\fP name of arabsorted file 
+.br
+\fIdefaultOut\fP name of default output file 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file handleComLine\&.cpp\&.
+.SS "char* Mystrdup (const char * from)"
+
+.PP
+Duplicates argument and returns ptr to it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP string to dupe 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ptr to allocated mem 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file handleComLine\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for Hamlet_reimagined from the source code\&.

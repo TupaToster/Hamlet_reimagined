@@ -16,6 +16,8 @@ protos.h
 .br
 \fC#include <sys\\stat\&.h>\fP
 .br
+\fC#include <ctype\&.h>\fP
+.br
 
 .SS "Classes"
 
@@ -33,7 +35,10 @@ protos.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBcheck\fP(cond,  retVal,  errType)"
+.RI "#define \fBMY_SORT\fP"
+.br
+.ti -1c
+.RI "#define \fBCHECK\fP(cond,  retVal,  errType)"
 .br
 .RI "Checks for condition and if true returns retVal and writes errType to errCode\&. "
 .in -1c
@@ -69,9 +74,9 @@ protos.h
 .br
 .RI "Returns size of file in chars\&. "
 .ti -1c
-.RI "char * \fBbufferize\fP (const char *filename)"
+.RI "void \fBbufferize\fP (const char *filename, \fBtext\fP *writeTo)"
 .br
-.RI "Bufferizes file input\&. "
+.RI "Buffirezes file\&. "
 .ti -1c
 .RI "\fBtext\fP \fBread_text\fP (const char *filename)"
 .br
@@ -99,6 +104,18 @@ protos.h
 .RI "void \fBpuzirek\fP (void *, size_t, size_t, int(*)(const void *, const void *))"
 .br
 .RI "Sorts\&. "
+.ti -1c
+.RI "void \fBhandleComLine\fP (int argc, char *argv[], char **inName, char **sortedOut, char **arabsortedOut, char **defaultOut)"
+.br
+.RI "Handle variable command line arguments\&. "
+.ti -1c
+.RI "void \fBcntLines\fP (\fBtext\fP *writeTo)"
+.br
+.RI "counts amount of lines in a text "
+.ti -1c
+.RI "void \fBseparateLines\fP (\fBtext\fP *writeTo)"
+.br
+.RI "separates lines in a text "
 .in -1c
 .SS "Variables"
 
@@ -110,7 +127,7 @@ protos.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define check(cond, retVal, errType)"
+.SS "#define CHECK(cond, retVal, errType)"
 \fBValue:\fP
 .PP
 .nf
@@ -134,7 +151,11 @@ Checks for condition and if true returns retVal and writes errType to errCode\&.
 .PP
 
 .PP
-Definition at line 22 of file protos\&.h\&.
+Definition at line 25 of file protos\&.h\&.
+.SS "#define MY_SORT"
+
+.PP
+Definition at line 7 of file protos\&.h\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBerrorCode\fP"
@@ -157,27 +178,24 @@ Error opening file\&.
 \fB\fIINPUT_ERROR \fP\fP
 Error in input function\&. 
 .PP
-Definition at line 7 of file protos\&.h\&.
+Definition at line 10 of file protos\&.h\&.
 .SH "Function Documentation"
 .PP 
-.SS "char* bufferize (const char * filename)"
+.SS "void bufferize (const char * filename, \fBtext\fP * writeTo)"
 
 .PP
-Bufferizes file input\&. 
+Buffirezes file\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIfilename\fP name of file to read from 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-ptr to c-string with whole text of file 
+\fIfilename\fP name of file to bufferize 
+.br
+\fIwriteTo\fP ptr to struct text to write buffer and buffer length to 
 .RE
 .PP
 
 .PP
-Definition at line 8 of file bufferize\&.cpp\&.
+Definition at line 6 of file bufferize\&.cpp\&.
 .SS "int cmpCore (\fBline\fP line1, \fBline\fP line2, int delta)"
 
 .PP
@@ -204,6 +222,19 @@ Core of comparison of 2 strings with direction of ptr movement\&.
 
 .PP
 Definition at line 64 of file comps\&.cpp\&.
+.SS "void cntLines (\fBtext\fP * src)"
+
+.PP
+counts amount of lines in a text 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP text* to wite to and read from 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file cntLines\&.cpp\&.
 .SS "void fputLine (\fBline\fP src, FILE * outfile)"
 
 .PP
@@ -226,6 +257,29 @@ sizeof file in chars
 
 .PP
 Definition at line 10 of file get_size\&.cpp\&.
+.SS "void handleComLine (int argc, char * argv[], char ** inName, char ** sortedOut, char ** arabsortedOut, char ** defaultOut)"
+
+.PP
+Handle variable command line arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP argument count 
+.br
+\fIargv\fP array of args 
+.br
+\fIinName\fP name of input file 
+.br
+\fIsortedOut\fP name of output straight sort file 
+.br
+\fIarabsortedOut\fP name of arabsorted file 
+.br
+\fIdefaultOut\fP name of default output file 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file handleComLine\&.cpp\&.
 .SS "void initLine (\fBline\fP * target)"
 
 .PP
@@ -364,7 +418,7 @@ Sorts\&.
 .PP
 
 .PP
-Definition at line 11 of file my_sort\&.cpp\&.
+Definition at line 13 of file my_sort\&.cpp\&.
 .SS "\fBtext\fP read_text (const char * filename)"
 
 .PP
@@ -383,6 +437,19 @@ text struct full of stuff
 Fills text struct with: textString - whole text of a file lines - array of lines of file of type [begin, end) stringCnt - amount of strings in file textSize - sizeof text (by get_size) 
 .PP
 Definition at line 14 of file read_text\&.cpp\&.
+.SS "void separateLines (\fBtext\fP * writeTo)"
+
+.PP
+separates lines in a text 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwriteTo\fP text* to write to and read from 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file separateLines\&.cpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBerrorCode\fP errCode\fC [extern]\fP"
