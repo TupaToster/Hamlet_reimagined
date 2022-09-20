@@ -5,6 +5,7 @@
 void separateLines (text* writeTo) {
 
     assert (writeTo != NULL);
+    assert (writeTo->lines != NULL);
 
     size_t line_iter = 0;
 

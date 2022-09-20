@@ -19,4 +19,6 @@ void bufferize (const char* filename, text* writeTo) {
 
     writeTo->textString[writeTo->textSize] = '\0';
 
+    fclose (fIn);
+
 }

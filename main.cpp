@@ -13,7 +13,7 @@ int main (int argc, char* argv[]) {
     char* sortedOut     = NULL;
     char* arabsortedOut = NULL;
     char* defaultOut    = NULL;
-    FILE* output = NULL;
+    FILE* output        = NULL;
 
     handleComLine (argc, argv, &inName, &sortedOut, &arabsortedOut, &defaultOut);
     assert (errCode == OK);
@@ -31,7 +31,7 @@ int main (int argc, char* argv[]) {
         #ifdef MY_SORT
             puzirek (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
         #else
-            qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
+            qsort   (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmp);
         #endif
 
         printf ("Sorted straight type, printing...\n");
@@ -42,6 +42,8 @@ int main (int argc, char* argv[]) {
         }
 
         printf ("Printed straight type. Procceeding.\n");
+
+        fclose (output);
     }
 
     if (arabsortedOut != NULL) {
@@ -54,7 +56,7 @@ int main (int argc, char* argv[]) {
         #ifdef MY_SORT
             puzirek (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
         #else
-            qsort (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
+            qsort   (hamlet.lines, hamlet.stringCnt, sizeof (line), lineCmpArab);
         #endif
 
         printf ("Sorted in arabic. Printing...\n");
@@ -65,6 +67,8 @@ int main (int argc, char* argv[]) {
         }
 
         printf ("Printed arabic type. \n");
+
+        fclose (output);
     }
 
     if (defaultOut != NULL) {
@@ -76,5 +80,14 @@ int main (int argc, char* argv[]) {
         fputs (hamlet.textString, output);
 
         printf ("Printed default");
+
+        fclose (output);
     }
+
+    free (inName);
+    free (sortedOut);
+    free (arabsortedOut);
+    free (defaultOut);
+
+    killText (&hamlet);
 }

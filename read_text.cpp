@@ -19,6 +19,7 @@ text read_text (const char* filename) {
     initText (&retVal);
 
     bufferize (filename, &retVal);
+    assert (errCode == OK);
     CHECK (errCode != OK, retVal, errCode);
 
     cntLines (&retVal);

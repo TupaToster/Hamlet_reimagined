@@ -2,6 +2,10 @@
 
 void fputLine (line src, FILE* outfile) {
 
+    assert (src.begin != NULL);
+    assert (src.end != NULL);
+    assert (outfile != NULL);
+
     char temp = *src.end;
     *src.end = '\0';
 

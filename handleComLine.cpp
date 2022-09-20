@@ -14,6 +14,8 @@ char* Mystrdup (const char* from) {
 
     temp[strlen (from)] = '\0';
 
+    free (temp);
+
     return temp;
 }
 
@@ -44,12 +46,12 @@ void handleComLine (int   argc,
                 "If \"-\" is inputted instead of output file name, than no such output file is created.\n"
                 "If \"-\" is inputted instead of input file, than default file with name of \"Hamlet\" is opened \n"
                 "If number of arguments is not fout or zero, the program will stop");
-        exit (0);
+        exit (-1);
     }
     if (argc != 5) {
 
         printf ("Invalid arguments");
-        exit (0);
+        exit (-1);
     }
     if (argc == 5) {
 

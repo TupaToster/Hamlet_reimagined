@@ -1,17 +1,6 @@
 #pragma GCC diagnostic ignored "-Wcast-qual"
 
 #include "protos.h"
-/// @brief checks for c being a letter or number
-/// @param c char to check
-/// @return true if is cool
-/// @return false if not cool
-bool isAlphaNum (const char c) {
-
-    return ((c >= 'a' and c <= 'z')
-    or      (c >= 'A' and c <= 'Z')
-    or      (c >= '0' and c <= '9'));
-}
-
 
 /// @brief Stright comp function
 /// @param fst first line to compare
@@ -20,6 +9,9 @@ bool isAlphaNum (const char c) {
 /// @return 0 if fst == scd
 /// @return 1 if fst > scd
 int lineCmp (const void* fst, const void* scd) {
+
+    assert (fst != NULL);
+    assert (scd != NULL);
 
     return cmpCore (*((line*) fst), *((line*) scd), sizeof (char));
 }
@@ -31,6 +23,9 @@ int lineCmp (const void* fst, const void* scd) {
 /// @return 0 if fst == scd
 /// @return 1 if fst > scd
 int lineCmpArab (const void* fst, const void* scd) {
+
+    assert (fst != NULL);
+    assert (scd != NULL);
 
     line line1 = *((line*) fst);
     line line2 = *((line*) scd);
@@ -49,7 +44,6 @@ int lineCmpArab (const void* fst, const void* scd) {
     line1.end--;
     line2.end--;
 
-
     return cmpCore (line1, line2, -1);
 }
 
@@ -63,8 +57,14 @@ int lineCmpArab (const void* fst, const void* scd) {
 /// @return 1 if line1 > line2
 int cmpCore (line line1, line line2, int delta) {
 
-    while (line1.begin != line1.end and !isAlphaNum (*line1.begin)) line1.begin += delta;
-    while (line2.begin != line2.end and !isAlphaNum (*line2.begin)) line2.begin += delta;
+    assert (line1.begin != NULL);
+    assert (line1.end   != NULL);
+
+    assert (line2.begin != NULL);
+    assert (line2.end   != NULL);
+
+    while (line1.begin != line1.end and !isalnum (*line1.begin)) line1.begin += delta;
+    while (line2.begin != line2.end and !isalnum (*line2.begin)) line2.begin += delta;
 
     while (line1.begin != line1.end
     and    line2.begin != line2.end

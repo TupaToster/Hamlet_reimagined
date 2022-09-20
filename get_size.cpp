@@ -9,6 +9,8 @@
 */
 size_t get_size (const char* filename) {
 
+    assert (filename != NULL);
+
     struct stat temp = {};
 
     stat (filename, &temp);

@@ -14,7 +14,7 @@ void puzirek (void* begin, size_t len, size_t elemSize, int (*comp) (const void*
 
     assert (begin != NULL);
     assert (comp != NULL);
-    
+
     char temp = '\0';
 
     for (size_t indent = 0; indent < len; indent++) {
